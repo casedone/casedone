@@ -278,15 +278,22 @@ section {
 }
 
 .card-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: var(--light-accent);
-    color: var(--secondary-color);
+    display: inline-block;
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 0.8rem;
     font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.badge-available {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.badge-coming-soon {
+    background-color: #e0e0e0;
+    color: #666666;
 }
 
 .card h3 {
@@ -314,99 +321,259 @@ section {
 }
 
 /* Consulting Section */
-.consulting-content {
+.consulting {
+    background-color: var(--light-background);
+    position: relative;
+    overflow: hidden;
+}
+
+.consulting::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--light-accent) 0%, transparent 70%);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.consulting-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.consulting-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.consulting-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.consulting-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--light-accent);
     display: flex;
     align-items: center;
-    gap: 50px;
+    justify-content: center;
+    margin: 0 auto 20px;
 }
 
-.consulting-text {
-    flex: 1;
+.icon-container i {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
 }
 
-.consulting-text h3 {
-    margin-bottom: 20px;
-}
-
-.consulting-benefits {
-    list-style: none;
-    margin: 25px 0;
-}
-
-.consulting-benefits li {
+.consulting-card h3 {
     margin-bottom: 15px;
-    display: flex;
-    align-items: flex-start;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
 }
 
-.consulting-benefits i {
-    color: var(--primary-color);
-    margin-right: 15px;
-    font-size: 1.2rem;
-    margin-top: 3px;
+.consulting-card p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-.consulting-image {
-    flex: 1;
+.consulting-cta {
     text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    z-index: 1;
 }
 
-.consulting-image img {
-    max-width: 100%;
-    height: auto;
+.consulting-cta p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.consulting-cta .btn {
+    padding: 14px 30px;
+    font-size: 1.05rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(81, 179, 22, 0.3);
 }
 
 /* About Section */
 .about {
     background-color: var(--light-background);
+    position: relative;
+    overflow: hidden;
 }
 
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.about-image {
-    flex: 1;
-    text-align: center;
-}
-
-.about-image img {
+.about::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 300px;
     height: 300px;
+    background: radial-gradient(circle, var(--light-accent) 0%, transparent 70%);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.about-profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-image {
+    flex: 0 0 auto;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid white;
-    box-shadow: var(--card-shadow);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.about-text {
-    flex: 2;
+.profile-info {
+    flex: 1;
 }
 
-.about-text .title {
+.profile-info h3 {
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.profile-info .title {
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
-.experience-list {
-    list-style: none;
-    margin: 25px 0;
-}
-
-.experience-list li {
-    margin-bottom: 15px;
+.social-links {
     display: flex;
-    align-items: flex-start;
+    gap: 15px;
+    margin-top: 25px;
 }
 
-.experience-list i {
-    color: var(--primary-color);
-    margin-right: 15px;
-    font-size: 1.2rem;
-    margin-top: 3px;
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-accent);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.experience-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.experience-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card .icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--light-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.experience-card .icon-container i {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.experience-card h3 {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+.experience-card p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .social-links {
@@ -610,9 +777,18 @@ footer {
         justify-content: center;
     }
     
-    .consulting-content,
-    .about-content {
+    .consulting-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-profile {
         flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .experience-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .about-image {
@@ -652,6 +828,23 @@ footer {
     
     .hamburger {
         display: flex;
+    }
+    
+    .consulting-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .consulting-cta {
+        padding: 25px 20px;
+    }
+    
+    .experience-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-image img {
+        width: 150px;
+        height: 150px;
     }
     
     .hero {
