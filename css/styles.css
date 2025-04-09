@@ -87,6 +87,18 @@ a:hover {
     border: none;
 }
 
+/* Email fallback */
+.email-fallback {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.email-text {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
