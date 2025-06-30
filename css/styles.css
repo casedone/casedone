@@ -962,3 +962,264 @@ footer {
 .nav-overlay.active {
     display: block;
 }
+
+/* Previous Work Section */
+.previous-work {
+    background-color: var(--background-color);
+}
+
+.work-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.work-card {
+    display: block;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    color: var(--text-color);
+    height: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+}
+
+.work-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.work-card:hover .work-image img {
+    transform: scale(1.05);
+}
+
+.work-content {
+    padding: 20px;
+}
+
+.work-content h3 {
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.work-card:hover .work-content h3 {
+    color: var(--primary-color);
+}
+
+.work-content p {
+    color: var(--light-text);
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.read-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover .read-more i {
+    transform: translateX(5px);
+}
+
+/* Project Page Styles */
+.project-header {
+    padding: 150px 0 50px;
+    background: linear-gradient(135deg, #F4F1E9 0%, #B1D182 100%);
+    text-align: center;
+}
+
+.project-header h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    color: var(--light-text);
+}
+
+.project-meta-item {
+    display: flex;
+    align-items: center;
+}
+
+.project-meta-item i {
+    margin-right: 8px;
+}
+
+.project-content {
+    padding: 60px 0;
+}
+
+.project-content .container {
+    max-width: 800px;
+}
+
+.project-image {
+    margin: 30px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.nav-previous, .nav-next {
+    display: flex;
+    align-items: center;
+}
+
+.nav-previous i {
+    margin-right: 10px;
+}
+
+.nav-next i {
+    margin-left: 10px;
+}
+
+@media (max-width: 992px) {
+    .project-header {
+        padding: 100px 0 30px;
+    }
+    
+    .project-content .container {
+        max-width: 600px;
+    }
+    
+    .project-image {
+        margin: 20px 0;
+    }
+    
+    .project-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-previous, .nav-next {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-header h1 {
+        font-size: 2rem;
+    }
+    
+    .project-content .container {
+        max-width: 400px;
+    }
+    
+    .project-image {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-header h1 {
+        font-size: 2rem;
+    }
+    
+    .project-content .container {
+        padding: 0 15px;
+    }
+    
+    .project-image {
+        margin: 20px 0;
+    }
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    margin: 30px 0;
+}
+
+.gallery-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.gallery-item {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+}
+
+.gallery-highlight {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.gallery-highlight img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+}
+
+.gallery-highlight figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--light-text);
+}
+
+/* Responsive Gallery */
+@media (max-width: 768px) {
+    .gallery-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .gallery-item {
+        margin-bottom: 10px;
+    }
+}
