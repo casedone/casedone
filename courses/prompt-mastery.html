@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Mastery - Master the AI Skill That Defines Modern Leadership</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+    <link rel="manifest" href="../site.webmanifest" />
+    
+    <style>
+        /* Enhanced Prompt Mastery Design */
+        :root {
+            --prompt-primary: #51B316;
+            --prompt-secondary: #2B463C;
+            --prompt-accent: #688F4E;
+            --prompt-light-accent: #B1D182;
+            --prompt-success: #22C55E;
+            --prompt-red: #EF4444;
+            --light-red-bg: #FEF2F2;
+            --light-green-bg: #F0FDF4;
+            --light-accent-bg: #F4F1E9;
+            --gradient-bg: linear-gradient(135deg, #F4F1E9 0%, #F0FDF4 100%);
+            --enhanced-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --hover-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            background: var(--gradient-bg);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(81, 179, 22, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            color: #4B5563;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Enhanced Section Styling */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #6B7280;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Enhanced Comparison Section */
+        .comparison-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #F9FAFB 100%);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .comparison-card {
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--enhanced-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--prompt-red), var(--prompt-success));
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .pains-card {
+            background: linear-gradient(135deg, var(--light-red-bg) 0%, #FEFEFE 100%);
+            border-left: 6px solid var(--prompt-red);
+        }
+
+        .pains-card::before {
+            background: var(--prompt-red);
+        }
+
+        .gains-card {
+            background: linear-gradient(135deg, var(--light-green-bg) 0%, #FEFEFE 100%);
+            border-left: 6px solid var(--prompt-success);
+        }
+
+        .gains-card::before {
+            background: var(--prompt-success);
+        }
+
+        .comparison-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .pains-card h3 { color: var(--prompt-red); }
+        .gains-card h3 { color: var(--prompt-success); }
+
+        .comparison-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-card li {
+            margin-bottom: 1.25rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .pains-card li::before {
+            content: "✗";
+            color: var(--prompt-red);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .gains-card li::before {
+            content: "✓";
+            color: var(--prompt-success);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Enhanced Playbook Section */
+        .playbook-section {
+            padding: 100px 0;
+            background: var(--gradient-bg);
+        }
+
+        .framework-highlight {
+            font-weight: 800;
+            color: var(--prompt-primary);
+            background: linear-gradient(135deg, var(--prompt-primary), var(--prompt-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Enhanced Transform Section */
+        .transform-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .transform-pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .pillar-card {
+            background: linear-gradient(135deg, #ffffff 0%, #F8FAFC 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--enhanced-shadow);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #E5E7EB;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--prompt-primary), var(--prompt-accent));
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--prompt-primary);
+        }
+
+        .pillar-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--prompt-primary), var(--prompt-accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.2rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(81, 179, 22, 0.3);
+        }
+
+        .pillar-card h3 {
+            color: var(--prompt-primary);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pillar-card p {
+            text-align: left;
+            margin-bottom: 1.5rem;
+            color: #4B5563;
+            line-height: 1.6;
+        }
+
+        .pillar-card ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+
+        .pillar-card li {
+            margin-bottom: 0.75rem;
+            padding-left: 2rem;
+            position: relative;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        .pillar-card li::before {
+            content: "→";
+            color: var(--prompt-primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.1rem;
+        }
+
+        .certificate-preview {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--light-accent-bg), #F0FDF4);
+            border-radius: 12px;
+            border: 2px dashed var(--prompt-primary);
+            color: var(--prompt-primary);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Enhanced Toolkit Section */
+        .toolkit-section {
+            padding: 100px 0;
+            background: var(--gradient-bg);
+        }
+
+        .toolkit-list {
+            max-width: 700px;
+            margin: 0 auto;
+            list-style: none;
+            padding: 0;
+        }
+
+        .toolkit-list li {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #F8FAFC 100%);
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            padding-left: 4rem;
+            transition: var(--transition);
+            border-left: 4px solid var(--prompt-primary);
+        }
+
+        .toolkit-list li:hover {
+            transform: translateX(8px);
+            box-shadow: var(--enhanced-shadow);
+        }
+
+        .toolkit-list li::before {
+            content: "📚";
+            position: absolute;
+            left: 1.5rem;
+            top: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        /* Enhanced Final CTA */
+        .final-cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--light-accent-bg) 0%, #F0FDF4 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(81, 179, 22, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .final-cta .section-header {
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta h2 {
+            color: var(--prompt-primary);
+            font-size: clamp(2.25rem, 4vw, 3rem);
+        }
+
+        /* Enhanced Buttons */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--prompt-primary), var(--prompt-accent));
+            color: white;
+            padding: 18px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(81, 179, 22, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(81, 179, 22, 0.4);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        /* Responsive Enhancements */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero .container {
+                min-height: 300px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+
+            .comparison-grid,
+            .transform-pillars {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .comparison-section,
+            .transform-section,
+            .playbook-section,
+            .toolkit-section,
+            .final-cta {
+                padding: 60px 0;
+            }
+
+            .section-header {
+                margin-bottom: 2.5rem;
+            }
+
+            .pillar-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .comparison-card,
+            .pillar-card {
+                padding: 1.5rem;
+            }
+
+            .toolkit-list li {
+                padding: 1rem;
+                padding-left: 3rem;
+            }
+
+            .btn-primary {
+                padding: 16px 28px;
+                font-size: 1rem;
+                min-width: 180px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Case Done Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#courses">Courses</a></li>
+                    <li><a href="../index.html#consulting">Consulting</a></li>
+                    <li><a href="../index.html#previous-work">Previous Work</a></li>
+                    <li><a href="../index.html#about">About Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Master the AI Skill That Defines Modern Leadership</h1>
+                <p>Hey there, leader. Ready to stop just <em>using</em> AI and start commanding it? This is your path to future-proof your career, drive mind-blowing results, and become the go-to AI expert your company desperately needs.</p>
+                <div class="cta-buttons">
+                    <a href="#enroll" class="btn btn-primary">Get Instant Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Be Honest... Sound Familiar?</h2>
+            </div>
+            <div class="comparison-grid">
+                <div class="comparison-card pains-card">
+                    <h3>Pains (The Struggle is Real)</h3>
+                    <ul>
+                        <li>Wasting hours trying to get AI to understand you.</li>
+                        <li>Getting generic, useless, or just plain wrong answers ('hallucinations').</li>
+                        <li>Worrying about data privacy and security every time you use AI.</li>
+                        <li>A nagging feeling you might be falling behind the tech curve.</li>
+                        <li>Not knowing how to leverage AI for a real competitive advantage in your role.</li>
+                    </ul>
+                </div>
+                <div class="comparison-card gains-card">
+                    <h3>Gains (Your New Reality)</h3>
+                    <ul>
+                        <li>Boosting your personal productivity and saving precious time.</li>
+                        <li>Generating high-quality strategic work, from business insights to cashflow projections.</li>
+                        <li>Leading AI adoption responsibly by building guardrails for safer interaction.</li>
+                        <li>Future-proofing your career and solidifying your role as an essential leader.</li>
+                        <li>Gaining a competitive edge and opening doors to new, high-paying career paths.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="playbook-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Playbook for Winning with AI.</h2>
+                <p>AI is reshaping every industry, and it can feel like being thrown into a new game without the rules. That's where Prompt Mastery comes in. Think of this course as your official playbook, packed with proven strategies to help you win.</p>
+                <p>We designed this playbook as a direct investment in <em>your</em> personal success, giving you the confidence and skill to make game-changing moves. At its heart is our proprietary <span class="framework-highlight">M.A.S.T.E.R. framework</span>—your core set of plays for crafting perfect prompts that get you exactly what you need, every single time.</p>
+                <div class="cta-buttons">
+                    <a href="#enroll" class="btn btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="transform-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How You'll Transform</h2>
+            </div>
+            <div class="transform-pillars">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🎯</div>
+                    <h3>Drive Serious Strategic Impact</h3>
+                    <p>Stop getting generic answers and start using AI for what really matters. This is where you move beyond basic queries and learn to use AI as a true strategic partner. You'll personally learn how to leverage AI for complex tasks like:</p>
+                    <ul>
+                        <li>Generating new business insights and creating action plans.</li>
+                        <li>Projecting cashflow and analyzing complex data.</li>
+                        <li>Automating high-level workflows to drive real business results.</li>
+                    </ul>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🛡️</div>
+                    <h3>Lead AI Adoption, Responsibly</h3>
+                    <p>Generative AI is powerful, but it comes with risks. We'll give you the expertise to lead with confidence. You'll become the leader who champions innovation the <em>right</em> way by learning how to:</p>
+                    <ul>
+                        <li>Create precise prompts that dramatically reduce AI 'hallucinations' and inaccuracies.</li>
+                        <li>Build guardrails for safer AI interaction, especially when dealing with sensitive data.</li>
+                        <li>Personally mitigate the data integrity and security risks of AI.</li>
+                    </ul>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🚀</div>
+                    <h3>Fast-Track Your Career Advancement</h3>
+                    <p>This is a critical skill set that solidifies your status as the go-to expert in your organization. This course is designed to give you a tangible return on your investment. You will:</p>
+                    <ul>
+                        <li>Earn the <strong>Prompt Mastery certificate</strong>, a valuable credential for your resume and LinkedIn profile.</li>
+                        <li>Become the go-to AI expert on your team.</li>
+                        <li>Open doors to new, high-paying career opportunities.</li>
+                    </ul>
+                    <div class="certificate-preview">
+                        🏆 Professional Prompt Mastery Certificate<br>
+                        <small>Boost your LinkedIn profile & resume</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="toolkit-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>A Peek Inside Your New Toolkit</h2>
+                <p>Here's a quick look at the fun, practical modules waiting for you inside:</p>
+            </div>
+            <ul class="toolkit-list">
+                <li>Foundation of Prompting: Where, what, and how to test prompts.</li>
+                <li>The M.A.S.T.E.R. Framework: Your step-by-step guide to prompt perfection.</li>
+                <li>M - Main Parts & Multi-modal Models: Master text, images, and more.</li>
+                <li>A - Acting: Get the AI to adopt the perfect persona for any task.</li>
+                <li>S - Structure of Prompts: Learn the anatomy of a flawless prompt.</li>
+                <li>And so much more!</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="final-cta" id="enroll">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Prompt Engineering Certification is Waiting.</h2>
+                <p>Invest in the one skill that delivers an immediate, personal return. Boost your productivity, gain a competitive edge in your career, and become the leader who confidently harnesses the power of AI.</p>
+                <div class="cta-buttons">
+                    <a href="https://courses.casedone.ai/l/pdp/prompt-mastery" target="_blank" class="btn btn-primary">Get Instant Access & Lead the Change</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../index.html">Prompt Mastery</a>
+                </div>
+                <p>&copy; 2025 Prompt Mastery. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
