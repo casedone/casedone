@@ -335,8 +335,6 @@
         }
 
         .toolkit-list {
-            max-width: 700px;
-            margin: 0 auto;
             list-style: none;
             padding: 0;
         }
@@ -364,6 +362,41 @@
             left: 1.5rem;
             top: 1.5rem;
             font-size: 1.5rem;
+        }
+
+        .toolkit-content {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .toolkit-text {
+            flex: 1;
+        }
+
+        .toolkit-gallery {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .example-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .toolkit-gallery img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .toolkit-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: var(--enhanced-shadow);
         }
 
         /* Enhanced Final CTA */
@@ -591,9 +624,10 @@
             }
 
             .comparison-grid,
-            .transform-pillars {
+            .transform-pillars,
+            .certification-grid,
+            .example-images {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
 
             .comparison-section,
@@ -612,6 +646,11 @@
                 width: 70px;
                 height: 70px;
                 font-size: 1.8rem;
+            }
+
+            .toolkit-content {
+                flex-direction: column;
+                gap: 3rem;
             }
         }
 
@@ -812,14 +851,23 @@
                 <h2>A Peek Inside Your New Toolkit</h2>
                 <p>Here's a quick look at the fun, practical modules waiting for you inside:</p>
             </div>
-            <ul class="toolkit-list">
-                <li>Foundation of Prompting: Where, what, and how to test prompts.</li>
-                <li>The M.A.S.T.E.R. Framework: Your step-by-step guide to prompt perfection.</li>
-                <li>M - Main Parts & Multi-modal Models: Master text, images, and more.</li>
-                <li>A - Acting: Get the AI to adopt the perfect persona for any task.</li>
-                <li>S - Structure of Prompts: Learn the anatomy of a flawless prompt.</li>
-                <li>And so much more!</li>
-            </ul>
+            <div class="toolkit-content">
+                <div class="toolkit-text">
+                    <ul class="toolkit-list">
+                        <li>Foundation of Prompting: Where, what, and how to test prompts.</li>
+                        <li>The M.A.S.T.E.R. Framework: Your step-by-step guide to prompt perfection.</li>
+                        <li>Use cases examples that can be widely applied.</li>
+                        <li>And so much more!</li>
+                    </ul>
+                </div>
+                <div class="toolkit-gallery">
+                    <img src="prompt-mastery-asset/master.jpg" alt="M.A.S.T.E.R. Framework Diagram">
+                    <div class="example-images">
+                        <img src="prompt-mastery-asset/example-1.jpeg" alt="Prompt Example 1">
+                        <img src="prompt-mastery-asset/example-2.jpeg" alt="Prompt Example 2">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
