@@ -359,6 +359,138 @@
             overflow: hidden;
         }
 
+        /* Certification Section */
+        .certification-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .certification-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .certification-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 2.5rem;
+            background: var(--gradient-bg);
+            border-radius: 20px;
+            box-shadow: var(--enhanced-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .certification-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .certification-item:nth-child(even) {
+            direction: rtl;
+        }
+
+        .certification-item:nth-child(even) .cert-content {
+            direction: ltr;
+        }
+
+        .cert-image {
+            text-align: center;
+        }
+
+        .cert-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .cert-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .cert-content h3 {
+            font-size: 1.5rem;
+            color: var(--prompt-secondary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .cert-content p {
+            font-size: 1.1rem;
+            color: #4B5563;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .cert-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cert-content ul li {
+            padding: 0.5rem 0;
+            color: #374151;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .cert-content ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--prompt-primary);
+            font-weight: bold;
+        }
+
+        .certification-cta {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--prompt-secondary);
+            border-radius: 20px;
+            color: white;
+        }
+
+        .cert-highlight {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .certification-cta .btn {
+            background: var(--prompt-primary);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .certification-cta .btn:hover {
+            background: var(--prompt-accent);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .certification-item {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .certification-item:nth-child(even) {
+                direction: ltr;
+            }
+
+            .certification-grid {
+                gap: 2rem;
+            }
+        }
+
         .final-cta::before {
             content: '';
             position: absolute;
@@ -520,7 +652,7 @@
                 <h1>Master the AI Skill That Defines Modern Leadership</h1>
                 <p>Hey there, leader. Ready to stop just <em>using</em> AI and start commanding it? This is your path to future-proof your career, drive mind-blowing results, and become the go-to AI expert your company desperately needs.</p>
                 <div class="cta-buttons">
-                    <a href="#enroll" class="btn btn-primary">Get Instant Access</a>
+                    <a href="https://courses.casedone.ai/l/pdp/prompt-mastery" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
         </div>
@@ -563,7 +695,7 @@
                 <p>AI is reshaping every industry, and it can feel like being thrown into a new game without the rules. That's where Prompt Mastery comes in. Think of this course as your official playbook, packed with proven strategies to help you win.</p>
                 <p>We designed this playbook as a direct investment in <em>your</em> personal success, giving you the confidence and skill to make game-changing moves. At its heart is our proprietary <span class="framework-highlight">M.A.S.T.E.R. framework</span>—your core set of plays for crafting perfect prompts that get you exactly what you need, every single time.</p>
                 <div class="cta-buttons">
-                    <a href="#enroll" class="btn btn-primary">Enroll Now</a>
+                    <a href="https://courses.casedone.ai/l/pdp/prompt-mastery" class="btn btn-primary">Enroll Now</a>
                 </div>
             </div>
         </div>
@@ -609,6 +741,51 @@
                         <small>Boost your LinkedIn profile & resume</small>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certification-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Earn Your Professional Credentials</h2>
+                <p>Upon completion, you'll receive both a professional certificate and digital badge to showcase your expertise and advance your career.</p>
+            </div>
+            <div class="certification-grid">
+                <div class="certification-item">
+                    <div class="cert-image">
+                        <img src="prompt-mastery-asset/certificate-example.png" alt="Professional Prompt Mastery Certificate" />
+                    </div>
+                    <div class="cert-content">
+                        <h3>🏆 Professional Certificate</h3>
+                        <p>Receive an official <strong>Prompt Mastery Certificate</strong> that validates your expertise in AI prompt engineering. Perfect for:</p>
+                        <ul>
+                            <li>Adding to your LinkedIn profile</li>
+                            <li>Enhancing your resume</li>
+                            <li>Demonstrating expertise to employers</li>
+                            <li>Building credibility as an AI leader</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="cert-image">
+                        <img src="prompt-mastery-asset/badge-example.png" alt="Digital Prompt Mastery Badge" />
+                    </div>
+                    <div class="cert-content">
+                        <h3>🎖️ Digital Badge</h3>
+                        <p>Get a <strong>verified digital badge</strong> that you can display across all your professional platforms. This badge:</p>
+                        <ul>
+                            <li>Verifies your completion and skills</li>
+                            <li>Links to your achievement details</li>
+                            <li>Integrates with LinkedIn and other platforms</li>
+                            <li>Demonstrates your commitment to AI excellence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="certification-cta">
+                <p class="cert-highlight">Join the ranks of certified AI prompt engineers and stand out in today's competitive market.</p>
+                <a href="https://courses.casedone.ai/l/pdp/prompt-mastery" target="_blank" class="btn btn-primary">Start Your Certification Journey</a>
             </div>
         </div>
     </section>
