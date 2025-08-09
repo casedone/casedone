@@ -82,6 +82,21 @@
             line-height: 1.6;
         }
 
+        .hero-course-image {
+            display: block;
+            max-width: 80%;
+            height: auto;
+            margin: 2.5rem auto;
+            border-radius: 16px;
+            box-shadow: var(--enhanced-shadow);
+            transition: var(--transition);
+        }
+
+        .hero-course-image:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+        }
+
         /* Enhanced Section Styling */
         .section-header {
             text-align: center;
@@ -651,6 +666,7 @@
             <div class="hero-content">
                 <h1>Master the AI Skill That Defines Modern Leadership</h1>
                 <p>Hey there, leader. Ready to stop just <em>using</em> AI and start commanding it? This is your path to future-proof your career, drive mind-blowing results, and become the go-to AI expert your company desperately needs.</p>
+                <img src="prompt-mastery-asset/prompt-mastery-course-title.jpg" alt="Prompt Mastery Course Title" class="hero-course-image">
                 <div class="cta-buttons">
                     <a href="https://courses.casedone.ai/l/pdp/prompt-mastery" class="btn btn-primary">Get Started</a>
                 </div>
