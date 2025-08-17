@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/nav-styles.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/kb-styles.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,18 +13,18 @@
 </head>
 <body>
     <!-- Global Navigation Bar -->
-    <header class="global-header">
-        <div class="container">
+    <header>
+        <div class="nav-container">
             <nav>
                 <div class="logo">
                     <a href="{{ '/' | relative_url }}"><img src="{{ '/images/logo.png' | relative_url }}" alt="Case Done Logo"></a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="{{ '/#courses' | relative_url }}">Courses</a></li>
-                    <li><a href="{{ '/#consulting' | relative_url }}">Consulting</a></li>
-                    <li><a href="{{ '/#previous-work' | relative_url }}">Previous Work</a></li>
+                    <li><a href="{{ '/' | relative_url }}#courses">Courses</a></li>
+                    <li><a href="{{ '/' | relative_url }}#consulting">Consulting</a></li>
+                    <li><a href="{{ '/' | relative_url }}#previous-work">Previous Work</a></li>
                     <li><a href="{{ '/knowledge-base/' | relative_url }}" class="active">Knowledge Base</a></li>
-                    <li><a href="{{ '/#about' | relative_url }}">About Us</a></li>
+                    <li><a href="{{ '/' | relative_url }}#about">About Us</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -33,6 +34,19 @@
             </nav>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="close-nav">&times;</div>
+        <ul>
+            <li><a href="{{ '/' | relative_url }}#courses">Courses</a></li>
+            <li><a href="{{ '/' | relative_url }}#consulting">Consulting</a></li>
+            <li><a href="{{ '/' | relative_url }}#previous-work">Previous Work</a></li>
+            <li><a href="{{ '/knowledge-base/' | relative_url }}">Knowledge Base</a></li>
+            <li><a href="{{ '/' | relative_url }}#about">About Us</a></li>
+        </ul>
+    </div>
+    <div class="nav-overlay"></div>
 
     <div class="kb-layout">
         <!-- Knowledge Base Sidebar Navigation -->
@@ -69,10 +83,33 @@
     </footer>
 
     <script>
-        // Mobile hamburger menu toggle
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.classList.toggle('active');
+        // Mobile navigation functionality
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const closeNav = document.querySelector('.close-nav');
+
+        function openMobileNav() {
+            mobileNav.classList.add('active');
+            navOverlay.classList.add('active');
+            hamburger.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileNav() {
+            mobileNav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileNav);
+        closeNav.addEventListener('click', closeMobileNav);
+        navOverlay.addEventListener('click', closeMobileNav);
+
+        // Close mobile nav when clicking on a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', closeMobileNav);
         });
     </script>
 </body>

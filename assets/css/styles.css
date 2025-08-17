@@ -130,69 +130,7 @@ a:hover {
     color: white;
 }
 
-/* Header and Navigation */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 15px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo a {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-color);
-    display: inline-block;
-}
-
-.logo img {
-    max-height: 40px;
-    width: auto;
-    vertical-align: middle;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    color: var(--text-color);
-    font-weight: 500;
-    font-family: 'Lexend', sans-serif;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 2px 0;
-    transition: var(--transition);
-}
+/* Navigation styles moved to shared/nav-styles.css */
 
 /* Hero Section */
 .hero {
@@ -909,13 +847,7 @@ footer {
         font-size: 1.8rem;
     }
     
-    .nav-links {
-        display: none;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
+    /* Mobile navigation styles moved to shared/nav-styles.css */
     
     .consulting-cards {
         grid-template-columns: 1fr;
@@ -955,60 +887,7 @@ footer {
     }
 }
 
-/* Mobile Navigation */
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    height: 100vh;
-    background-color: white;
-    z-index: 1001;
-    padding: 80px 20px 20px;
-    transition: var(--transition);
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-nav.active {
-    right: 0;
-}
-
-.mobile-nav ul {
-    list-style: none;
-}
-
-.mobile-nav li {
-    margin-bottom: 20px;
-}
-
-.mobile-nav a {
-    color: var(--text-color);
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.close-nav {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.nav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: none;
-}
-
-.nav-overlay.active {
-    display: block;
-}
+/* Mobile navigation styles moved to shared/nav-styles.css */
 
 /* Previous Work Section */
 .previous-work {

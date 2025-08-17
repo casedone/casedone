@@ -31,3 +31,6 @@ dist/
 build/
 _site/
 Gemfile.lock
+
+# Windsurf
+.windsurf
