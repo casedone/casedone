@@ -16,11 +16,24 @@
 title: CaseDone Knowledge Base
 description: >- # this means to ignore newlines until "baseurl:"
   The official knowledge base for CaseDone services and products.
-baseurl: "/knowledge-base" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+# Collections and layout configuration
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:name/
+
+# Layout directory
+layouts_dir: knowledge-base/_layouts
+
+# Include knowledge-base directory
+include:
+  - knowledge-base
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -36,18 +49,3 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - css/
-  - courses/
-  - dev/
-  - images/
-  - instructions-for-ai/
-  - js/
-  - projects/
-  - index.html
-  - apple-touch-icon.png
-  - favicon-96x96.png
-  - favicon.ico
-  - favicon.svg
-  - site.webmanifest
-  - web-app-manifest-192x192.png
-  - web-app-manifest-512x512.png

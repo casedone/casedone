@@ -5,20 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/kb-styles.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="kb-container">
-        <header class="kb-header">
-            <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-        </header>
+    <!-- Global Navigation Bar -->
+    <header class="global-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="{{ '/' | relative_url }}"><img src="{{ '/images/logo.png' | relative_url }}" alt="Case Done Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="{{ '/#courses' | relative_url }}">Courses</a></li>
+                    <li><a href="{{ '/#consulting' | relative_url }}">Consulting</a></li>
+                    <li><a href="{{ '/#previous-work' | relative_url }}">Previous Work</a></li>
+                    <li><a href="{{ '/knowledge-base/' | relative_url }}" class="active">Knowledge Base</a></li>
+                    <li><a href="{{ '/#about' | relative_url }}">About Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-        <main>
-            {{ content }}
+    <div class="kb-layout">
+        <!-- Knowledge Base Sidebar Navigation -->
+        <aside class="kb-sidebar">
+            <div class="kb-nav">
+                <h3>Knowledge Base</h3>
+                <ul class="kb-nav-links">
+                    <li><a href="{{ '/knowledge-base/' | relative_url }}" {% if page.url == '/knowledge-base/' %}class="active"{% endif %}>All Articles</a></li>
+                </ul>
+                
+                <div class="kb-recent">
+                    <h4>Recent Articles</h4>
+                    <ul>
+                        {% for post in site.posts limit:5 %}
+                        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="kb-main">
+            <div class="kb-content">
+                {{ content }}
+            </div>
         </main>
-
-        <footer class="kb-footer">
-            <p>&copy; {{ 'now' | date: "%Y" }} CaseDone. All rights reserved.</p>
-        </footer>
     </div>
+
+    <footer class="kb-footer">
+        <div class="container">
+            <p>&copy; {{ 'now' | date: "%Y" }} CaseDone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile hamburger menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
