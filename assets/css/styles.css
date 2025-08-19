@@ -228,6 +228,8 @@ section {
     box-shadow: var(--card-shadow);
     position: relative;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -305,6 +307,21 @@ section {
 .features i {
     color: var(--success-color);
     margin-right: 10px;
+}
+
+.card .btn {
+    width: 100%;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.card-buttons .btn {
+    flex-grow: 1;
 }
 
 .platform-note {
