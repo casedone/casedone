@@ -148,10 +148,12 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: block !important; /* Override the mobile hide rule */
 }
 
 .mobile-nav li {
     margin-bottom: 20px;
+    display: block !important; /* Ensure list items are visible */
 }
 
 .mobile-nav a {
