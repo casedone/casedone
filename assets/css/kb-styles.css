@@ -238,6 +238,32 @@ a:hover {
     font-size: 0.95em;
 }
 
+/* Images */
+.kb-content img,
+.kb-post-content img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 30px auto;
+    display: block;
+}
+
+/* Mobile responsive for images */
+@media (max-width: 768px) {
+    .kb-content img,
+    .kb-post-content img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .kb-content img,
+    .kb-post-content img {
+        max-width: 100%;
+    }
+}
+
 /* Blockquotes */
 .kb-post-content blockquote {
     border-left: 4px solid var(--primary-color);
