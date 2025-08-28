@@ -334,77 +334,8 @@ a:hover {
     }
 }
 
-/* Global Header Styles - Matching Main Site */
-.global-header {
-    background-color: var(--background-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.global-header .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.global-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-}
-
-.global-header .logo img {
-    height: 40px;
-    width: auto;
-}
-
-.global-header .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-.global-header .nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: var(--transition);
-    position: relative;
-}
-
-.global-header .nav-links a:hover,
-.global-header .nav-links a.active {
-    color: var(--primary-color);
-}
-
-.global-header .nav-links a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    transition: var(--transition);
-}
+/* Global Header Styles - Navigation handled by nav-styles.css */
+/* Knowledge Base pages inherit all navigation styling from the centralized nav-styles.css */
 
 /* Knowledge Base Layout */
 .kb-layout {
@@ -528,42 +459,9 @@ a:hover {
     padding: 0 20px;
 }
 
-/* Mobile Responsive for New Layout */
+/* Mobile Responsive for Knowledge Base Layout */
 @media (max-width: 768px) {
-    .global-header .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: var(--background-color);
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 2rem;
-        transition: var(--transition);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .global-header .nav-links.active {
-        left: 0;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
-    
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
+    /* Mobile navigation handled by nav-styles.css */
     
     .kb-layout {
         flex-direction: column;

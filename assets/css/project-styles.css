@@ -58,57 +58,8 @@ body {
     padding: 0 20px;
 }
 
-/* Header Styles */
-header {
-    background: var(--project-bg-primary);
-    box-shadow: var(--project-shadow);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-}
-
-.logo img {
-    height: 40px;
-    width: auto;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 500;
-    transition: var(--transition-fast);
-}
-
-.nav-links a:hover {
-    color: var(--project-primary);
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-primary);
-    transition: var(--transition-fast);
-}
+/* Header Styles - Navigation handled by nav-styles.css */
+/* Project pages inherit all navigation styling from the centralized nav-styles.css */
 
 /* Project Header Section */
 .project-header {
@@ -435,14 +386,6 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
-    
     .project-header {
         padding: var(--section-padding-mobile);
     }
