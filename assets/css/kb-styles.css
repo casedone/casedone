@@ -472,11 +472,11 @@ a:hover {
     .kb-sidebar {
         width: 100%;
         position: static;
-        order: 2;
+        order: 1;
     }
     
     .kb-main {
-        order: 1;
+        order: 2;
     }
     
     .kb-content {
