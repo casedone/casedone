@@ -95,4 +95,4 @@ In our next post, we'll talk about what constitutes a functional AI agent. Subsc
 
 ----
 
-> *FYI*: More articles can be found in our dedicated [Blogs on Substack](https://casedonebyai.substack.com/).
+> *FYI*: 📩 Subscribe and find More articles can be found in our dedicated [Blogs on Substack](https://casedonebyai.substack.com/).
