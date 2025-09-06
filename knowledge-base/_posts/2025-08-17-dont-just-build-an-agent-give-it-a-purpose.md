@@ -6,6 +6,7 @@ categories: agentic-ai
 ---
 
 The world of AI is buzzing with a new term: **agents**. If you're in the tech space, you've likely seen the flood of demos, open-source projects, and think pieces. The promise is incredible: AI that doesn't just respond, but acts. It's a significant leap, moving from passive tools to active partners.
+
 As an engineer who has been in the trenches of AI development for years, I've seen this excitement before. But I've also seen the #1 mistake that brilliant teams make: building a technically impressive agent that does... well, nothing of value. They fall in love with the how and completely forget the why.
 This series is your guide to avoiding that trap. We're going to build an AI agent from the ground up, but we're going to do it the right way. And it all starts with the most critical, yet often overlooked, phase: planning. Before you write a single line of code, you need to give your agent a mission.
 

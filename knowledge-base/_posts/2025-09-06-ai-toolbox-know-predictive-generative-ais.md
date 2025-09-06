@@ -5,9 +5,7 @@ date:   2025-09-06 08:00:00 +0700
 categories: agentic-ai
 ---
 
-Did you know that AI existed long before ChatGPT?
-
-It’s true. Today, when most people hear the word “AI,” their minds immediately jump to tools like ChatGPT, Gemini, or Claude. But those are just one part of the bigger AI picture. To truly benefit from what artificial intelligence has to offer, you should be aware of that bigger picture.
+Did you know that AI existed long before ChatGPT? It’s true. Today, when most people hear the word “AI,” their minds immediately jump to tools like ChatGPT, Gemini, or Claude. But those are just one part of the bigger AI picture. To truly benefit from what artificial intelligence has to offer, you should be aware of that bigger picture.
 
 Broadly speaking, AI can be broken down into two main types:
 1. Predictive AI
