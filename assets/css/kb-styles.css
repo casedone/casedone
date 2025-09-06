@@ -264,6 +264,69 @@ a:hover {
     }
 }
 
+/* Tables */
+.kb-post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kb-post-content table th,
+.kb-post-content table td {
+    padding: 15px 20px;
+    text-align: left;
+    border: 2px solid var(--secondary-color);
+    vertical-align: top;
+}
+
+.kb-post-content table th {
+    background-color: var(--light-background);
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-family: 'Lexend', sans-serif;
+}
+
+.kb-post-content table td {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.kb-post-content table tr:nth-child(even) {
+    background-color: rgba(177, 209, 130, 0.05);
+}
+
+.kb-post-content table tr:hover {
+    background-color: rgba(177, 209, 130, 0.1);
+    transition: var(--transition);
+}
+
+/* Mobile responsive tables */
+@media (max-width: 768px) {
+    .kb-post-content table {
+        font-size: 0.9rem;
+    }
+    
+    .kb-post-content table th,
+    .kb-post-content table td {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kb-post-content table {
+        font-size: 0.8rem;
+    }
+    
+    .kb-post-content table th,
+    .kb-post-content table td {
+        padding: 8px 10px;
+    }
+}
+
 /* Blockquotes */
 .kb-post-content blockquote {
     border-left: 4px solid var(--primary-color);
