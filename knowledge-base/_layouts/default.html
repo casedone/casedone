@@ -87,6 +87,13 @@
     <div class="nav-overlay"></div>
 
     <div class="kb-layout">
+        <!-- Mobile KB Menu Button -->
+        <button class="kb-mobile-menu-btn" aria-label="Toggle Knowledge Base Menu">
+            <span class="kb-hamburger-line"></span>
+            <span class="kb-hamburger-line"></span>
+            <span class="kb-hamburger-line"></span>
+        </button>
+        
         <!-- Knowledge Base Sidebar Navigation -->
         <aside class="kb-sidebar">
             <div class="kb-nav">
@@ -114,6 +121,9 @@
                 </div>
             </div>
         </aside>
+        
+        <!-- KB Sidebar Overlay -->
+        <div class="kb-sidebar-overlay"></div>
 
         <!-- Main Content Area -->
         <main class="kb-main">
@@ -157,6 +167,51 @@
         // Close mobile nav when clicking on a link
         document.querySelectorAll('.mobile-nav a').forEach(link => {
             link.addEventListener('click', closeMobileNav);
+        });
+
+        // Knowledge Base Mobile Sidebar functionality
+        const kbMobileMenuBtn = document.querySelector('.kb-mobile-menu-btn');
+        const kbSidebar = document.querySelector('.kb-sidebar');
+        const kbSidebarOverlay = document.querySelector('.kb-sidebar-overlay');
+
+        function openKbSidebar() {
+            kbSidebar.classList.add('active');
+            kbSidebarOverlay.classList.add('active');
+            kbMobileMenuBtn.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeKbSidebar() {
+            kbSidebar.classList.remove('active');
+            kbSidebarOverlay.classList.remove('active');
+            kbMobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        if (kbMobileMenuBtn) {
+            kbMobileMenuBtn.addEventListener('click', function() {
+                if (kbSidebar.classList.contains('active')) {
+                    closeKbSidebar();
+                } else {
+                    openKbSidebar();
+                }
+            });
+        }
+
+        if (kbSidebarOverlay) {
+            kbSidebarOverlay.addEventListener('click', closeKbSidebar);
+        }
+
+        // Close KB sidebar when clicking on a navigation link
+        document.querySelectorAll('.kb-nav-links a, .kb-recent a').forEach(link => {
+            link.addEventListener('click', closeKbSidebar);
+        });
+
+        // Close KB sidebar when window is resized to desktop size
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeKbSidebar();
+            }
         });
 
         // Category filtering functionality
