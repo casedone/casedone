@@ -2,6 +2,15 @@
 layout: default
 ---
 <article class="kb-post">
+  <div class="kb-back-button">
+    <a href="{{ '/knowledge-base/' | relative_url }}" class="kb-back-link">
+      <svg class="kb-back-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.5 3L1.5 8L6.5 13M2 8H14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to Knowledge Base
+    </a>
+  </div>
+  
   <h1>{{ page.title }}</h1>
   <p class="kb-post-meta">{{ page.date | date: "%B %d, %Y" }}</p>
 

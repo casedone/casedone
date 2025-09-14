@@ -190,13 +190,28 @@
         // Add event listeners to category filters
         document.addEventListener('DOMContentLoaded', function() {
             const categoryFilters = document.querySelectorAll('.category-filter');
+            const isKnowledgeBasePage = window.location.pathname.endsWith('/knowledge-base/') || window.location.pathname.endsWith('/knowledge-base/index.html');
+            
             categoryFilters.forEach(filter => {
                 filter.addEventListener('click', function(e) {
                     e.preventDefault();
                     const category = this.dataset.category;
+                    
+                    // If we're not on the knowledge base index page, navigate there with the category parameter
+                    if (!isKnowledgeBasePage) {
+                        const baseUrl = window.location.origin + '/knowledge-base/';
+                        if (category === 'all') {
+                            window.location.href = baseUrl;
+                        } else {
+                            window.location.href = `${baseUrl}?category=${category}`;
+                        }
+                        return;
+                    }
+                    
+                    // If we're already on the knowledge base page, filter in place
                     filterPostsByCategory(category);
                     
-                    // Update URL without page reload (optional)
+                    // Update URL without page reload
                     if (category === 'all') {
                         history.pushState(null, '', window.location.pathname);
                     } else {
@@ -205,11 +220,13 @@
                 });
             });
 
-            // Check for category parameter in URL on page load
-            const urlParams = new URLSearchParams(window.location.search);
-            const categoryParam = urlParams.get('category');
-            if (categoryParam) {
-                filterPostsByCategory(categoryParam);
+            // Check for category parameter in URL on page load (only on knowledge base page)
+            if (isKnowledgeBasePage) {
+                const urlParams = new URLSearchParams(window.location.search);
+                const categoryParam = urlParams.get('category');
+                if (categoryParam) {
+                    filterPostsByCategory(categoryParam);
+                }
             }
         });
     </script>

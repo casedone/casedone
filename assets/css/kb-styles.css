@@ -1,5 +1,37 @@
 /* Knowledge Base Styles - Based on Main Site Design System */
 
+/* Back Button Styles */
+.kb-back-button {
+    margin-bottom: 2rem;
+}
+
+.kb-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: var(--transition);
+    border-radius: 4px;
+}
+
+.kb-back-link:hover {
+    color: var(--primary-color);
+    transform: translateX(-2px);
+}
+
+.kb-back-icon {
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.kb-back-link:hover .kb-back-icon {
+    transform: translateX(-2px);
+}
+
 /* CSS Custom Properties from Main Site */
 :root {
     --primary-color: #51B316;
