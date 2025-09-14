@@ -3,7 +3,6 @@ layout: post
 title:  "Don't Build AI Agents without These 4 Components"
 date:   2025-09-15 05:00:00 +0700
 categories: 
-  - agentic-ai
   - "Your First Agentic AI Blueprint"
 ---
 
