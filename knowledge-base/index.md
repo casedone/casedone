@@ -21,7 +21,7 @@ title: Home
           {% endfor %}
         </div>
       {% endif %}
-      <p>{{ post.excerpt }}</p>
+      <p>{% if post.excerpt_override %}{{ post.excerpt_override }}{% else %}{{ post.excerpt }}{% endif %}</p>
     </li>
   {% endfor %}
 </ul>

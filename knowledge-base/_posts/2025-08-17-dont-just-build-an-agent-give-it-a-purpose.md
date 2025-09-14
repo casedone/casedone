@@ -5,6 +5,7 @@ date:   2025-08-17 21:51:18 +0700
 categories:
   - "Agentic AI"
   - "Your First Agentic AI Blueprint"
+excerpt_override: "Learn the critical first step in building AI agents: defining a clear mission. Discover when you actually need agentic AI vs. simple workflows, and see real-world examples of agents that excel at navigating uncertainty."
 ---
 
 The world of AI is buzzing with a new term: **agents**. If you're in the tech space, you've likely seen the flood of demos, open-source projects, and think pieces. The promise is incredible: AI that doesn't just respond, but acts. It's a significant leap, moving from passive tools to active partners.
