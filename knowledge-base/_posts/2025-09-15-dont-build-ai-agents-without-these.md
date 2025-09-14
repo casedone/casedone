@@ -2,7 +2,9 @@
 layout: post
 title:  "Don't Build AI Agents without These 4 Components"
 date:   2025-09-15 05:00:00 +0700
-categories: agentic-ai, Your First Agentic AI Blueprint
+categories: 
+  - agentic-ai
+  - "Your First Agentic AI Blueprint"
 ---
 
 In our previous post, we explored why you shouldn't just build an agent, but [give it a purpose](https://www.casedone.ai/posts/2025-08-17-dont-just-build-an-agent-give-it-a-purpose/). We covered the core principles that make an AI system truly "agentic," moving beyond simple automation to tackle complex, goal-oriented tasks.

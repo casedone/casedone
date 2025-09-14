@@ -12,6 +12,15 @@ title: Home
         </a>
       </h2>
       <p class="kb-post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+      {% if post.categories and post.categories.size > 0 %}
+        <div class="kb-post-categories">
+          {% for category in post.categories %}
+            {% unless category == 'Knowledge-Base' or category == 'knowledge-base' %}
+              <span class="kb-category-tag">{{ category | strip }}</span>
+            {% endunless %}
+          {% endfor %}
+        </div>
+      {% endif %}
       <p>{{ post.excerpt }}</p>
     </li>
   {% endfor %}
