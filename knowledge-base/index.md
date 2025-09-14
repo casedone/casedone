@@ -5,7 +5,7 @@ title: Home
 
 <ul class="kb-post-list">
   {% for post in site.posts %}
-    <li>
+    <li class="kb-post-item" data-categories="{% for category in post.categories %}{% unless category == 'Knowledge-Base' or category == 'knowledge-base' %}{{ category | strip | slugify }} {% endunless %}{% endfor %}">
       <h2>
         <a href="{{ post.url | relative_url }}">
           {{ post.title }}

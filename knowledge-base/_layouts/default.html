@@ -92,7 +92,16 @@
             <div class="kb-nav">
                 <h3>Knowledge Base</h3>
                 <ul class="kb-nav-links">
-                    <li><a href="{{ '/knowledge-base/' | relative_url }}" {% if page.url == '/knowledge-base/' %}class="active"{% endif %}>All Articles</a></li>
+                    <li><a href="{{ '/knowledge-base/' | relative_url }}" class="category-filter active" data-category="all" {% if page.url == '/knowledge-base/' %}{% endif %}>All Articles</a></li>
+                    {% assign all_categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+                    {% for category in all_categories %}
+                        {% unless category == 'Knowledge-Base' or category == 'knowledge-base' or category == '' %}
+                            {% assign clean_category = category | strip %}
+                            {% unless clean_category == '' %}
+                                <li><a href="#" class="category-filter" data-category="{{ clean_category | slugify }}">{{ clean_category }}</a></li>
+                            {% endunless %}
+                        {% endunless %}
+                    {% endfor %}
                 </ul>
                 
                 <div class="kb-recent">
@@ -148,6 +157,60 @@
         // Close mobile nav when clicking on a link
         document.querySelectorAll('.mobile-nav a').forEach(link => {
             link.addEventListener('click', closeMobileNav);
+        });
+
+        // Category filtering functionality
+        function filterPostsByCategory(category) {
+            const posts = document.querySelectorAll('.kb-post-item');
+            const categoryFilters = document.querySelectorAll('.category-filter');
+            
+            // Update active state on category links
+            categoryFilters.forEach(filter => {
+                filter.classList.remove('active');
+                if (filter.dataset.category === category) {
+                    filter.classList.add('active');
+                }
+            });
+            
+            // Show/hide posts based on category
+            posts.forEach(post => {
+                if (category === 'all') {
+                    post.style.display = 'block';
+                } else {
+                    const postCategories = post.dataset.categories || '';
+                    if (postCategories.includes(category)) {
+                        post.style.display = 'block';
+                    } else {
+                        post.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Add event listeners to category filters
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryFilters = document.querySelectorAll('.category-filter');
+            categoryFilters.forEach(filter => {
+                filter.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const category = this.dataset.category;
+                    filterPostsByCategory(category);
+                    
+                    // Update URL without page reload (optional)
+                    if (category === 'all') {
+                        history.pushState(null, '', window.location.pathname);
+                    } else {
+                        history.pushState(null, '', `${window.location.pathname}?category=${category}`);
+                    }
+                });
+            });
+
+            // Check for category parameter in URL on page load
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            if (categoryParam) {
+                filterPostsByCategory(categoryParam);
+            }
         });
     </script>
 </body>
