@@ -2,54 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set current year in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
     
-    // Mobile navigation toggle
-    const hamburger = document.querySelector('.hamburger');
-    const body = document.querySelector('body');
-    
-    if (hamburger) {
-        // Create mobile nav elements
-        const mobileNav = document.createElement('div');
-        mobileNav.className = 'mobile-nav';
-        
-        const closeNav = document.createElement('div');
-        closeNav.className = 'close-nav';
-        closeNav.innerHTML = '<i class="fas fa-times"></i>';
-        
-        const navOverlay = document.createElement('div');
-        navOverlay.className = 'nav-overlay';
-        
-        // Clone nav links for mobile
-        const navLinks = document.querySelector('.nav-links').cloneNode(true);
-        
-        // Append elements
-        mobileNav.appendChild(closeNav);
-        mobileNav.appendChild(navLinks);
-        body.appendChild(mobileNav);
-        body.appendChild(navOverlay);
-        
-        // Toggle mobile nav
-        hamburger.addEventListener('click', function() {
-            mobileNav.classList.add('active');
-            navOverlay.classList.add('active');
-            body.style.overflow = 'hidden';
-        });
-        
-        // Close mobile nav
-        closeNav.addEventListener('click', closeMobileNav);
-        navOverlay.addEventListener('click', closeMobileNav);
-        
-        function closeMobileNav() {
-            mobileNav.classList.remove('active');
-            navOverlay.classList.remove('active');
-            body.style.overflow = '';
-        }
-        
-        // Close mobile nav when clicking on a link
-        const mobileNavLinks = mobileNav.querySelectorAll('a');
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', closeMobileNav);
-        });
-    }
+    // Mobile navigation is now handled by the navigation include
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -1,10 +1,12 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prompt Mastery - Master the AI Skill That Defines Modern Leadership</title>
-    <link rel="stylesheet" href="../assets/css/nav-styles.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/course-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -57,27 +59,7 @@
     <!-- End Facebook Pixel Code -->
 </head>
 <body class="course-prompt-mastery">
-    <header>
-        <div class="nav-container">
-            <nav>
-                <div class="logo">
-                    <a href="../index.html"><img src="../images/logo.png" alt="Case Done Logo"></a>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="../index.html#courses">Courses</a></li>
-                    <li><a href="../index.html#consulting">Consulting</a></li>
-                    <li><a href="../index.html#previous-work">Previous Work</a></li>
-                    <li><a href="../knowledge-base/">Knowledge Base</a></li>
-                    <li><a href="../index.html#about">About Us</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    {% include navigation.html %}
 
     <section class="hero">
         <div class="container">
@@ -290,6 +272,7 @@
         </div>
     </footer>
 
+    {% include navigation-script.html %}
     <script src="../js/script.js"></script>
 </body>
 </html>

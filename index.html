@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,26 +58,7 @@
     <!-- End Facebook Pixel Code -->
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <nav>
-                <div class="logo">
-                    <a href="#"><img src="images/logo.png" alt="Case Done Logo"></a>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#previous-work">Previous Work</a></li>
-                    <li><a href="knowledge-base/">Knowledge Base</a></li>
-                    <li><a href="#about">About Us</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    {% include navigation.html %}
 
     <section class="hero">
         <div class="container">
@@ -249,7 +233,7 @@
                     </div>
                 </div>
             </div>
-            <div class="experience-cards">
+            <!-- <div class="experience-cards">
                 <div class="experience-card">
                     <div class="icon-container">
                         <i class="fas fa-briefcase"></i>
@@ -271,7 +255,7 @@
                     <h3>Education</h3>
                     <p>Delivered in-house training and workshops for various organizations, helping teams understand and leverage AI.</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -310,6 +294,7 @@
         </div>
     </footer>
 
+    {% include navigation-script.html %}
     <script src="js/main.js"></script>
 </body>
 </html>
