@@ -49,3 +49,5 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - instructions-for-ai/
+  - dev
