@@ -158,6 +158,7 @@ a:hover {
     transition: var(--transition);
     border-left: 4px solid var(--light-accent);
     display: flex;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -173,13 +174,11 @@ a:hover {
     max-width: 40%;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--light-background) 0%, #f8f9fa 100%);
+    background: #ffffff;
 }
 
 .kb-post-image a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     height: 100%;
 }
 
@@ -187,7 +186,7 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background: #f8f9fa;
+    background: #ffffff;
     transition: var(--transition);
 }
 

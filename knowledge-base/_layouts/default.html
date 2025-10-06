@@ -171,11 +171,11 @@
             // Show/hide posts based on category
             posts.forEach(post => {
                 if (category === 'all') {
-                    post.style.display = 'block';
+                    post.style.display = 'flex';
                 } else {
                     const postCategories = post.dataset.categories || '';
                     if (postCategories.includes(category)) {
-                        post.style.display = 'block';
+                        post.style.display = 'flex';
                     } else {
                         post.style.display = 'none';
                     }
