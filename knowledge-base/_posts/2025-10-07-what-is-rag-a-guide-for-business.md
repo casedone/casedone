@@ -4,6 +4,7 @@ title:  "What is RAG? A Guide for Business"
 date:   2025-10-07 06:00:00 +0700
 categories:
   - "Agentic AI"
+  - "RAG"
 excerpt_override: "Learn how Retrieval-Augmented Generation bridges the critical knowledge gap for Large Language Models."
 featured_image: "/assets/images/blog/2025-10-07-what-is-rag-a-guide-for-business/RAG.PNG"
 ---
