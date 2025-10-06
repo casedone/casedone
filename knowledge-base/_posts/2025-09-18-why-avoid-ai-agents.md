@@ -5,6 +5,7 @@ date:   2025-09-19 12:00:00 +0700
 categories: 
   - "Agentic AI"
 excerpt_override: "Hey, AI agents may not be the best for you. Here are 4 reasons why you should avoid using them."
+featured_image: "/assets/images/blog/2025-09-18-why-avoid-ai-agents/why-avooid-ai-agents-01.png"
 ---
 
 Thinking about building an AI agent? For most use cases, you should reconsider. While the concept of an autonomous system is compelling, it often leads to solutions that are harder to control, more expensive to run, and unnecessarily complex. This article breaks down the four critical reasons why building an agent is often a mistake and shows why a simpler approach is the smarter, more reliable path to success.

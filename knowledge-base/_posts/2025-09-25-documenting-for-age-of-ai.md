@@ -5,6 +5,7 @@ date:   2025-09-25 21:51:18 +0700
 categories:
   - "Agentic AI"
 excerpt_override: "Our Documentation Was a Messy Goldmine. Here's How We're Fixing It for AI."
+featured_image: "/assets/images/blog/2025-09-25-documenting-for-age-of-ai/documenting-for-ai.png"
 ---
 
 

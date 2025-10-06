@@ -6,6 +6,7 @@ categories:
   - "Agentic AI"
   - "Your First Agentic AI Blueprint"
 excerpt_override: "Building an AI agent? Do not miss 4 critical components of powerful AI Agents: brain, eyes, hands, and mind."
+featured_image: "/assets/images/blog/2025-09-15-dont-build-ai-agents-without-these/image-1.png"
 ---
 
 In our previous post, we explored why you shouldn't just build an agent, but [give it a purpose](https://www.casedone.ai/posts/2025-08-17-dont-just-build-an-agent-give-it-a-purpose/). We covered the core principles that make an AI system truly "agentic," moving beyond simple automation to tackle complex, goal-oriented tasks.
