@@ -66,3 +66,7 @@ To maintain validity, special considerations must be made:
 
 ## Final Takeaway
 The reliable evaluation of LLM agents is a sophisticated technical challenge that requires moving beyond simple text-to-text metrics toward validating complex, multi-step actions and ensuring high-quality, hack-proof measurement. Given the accelerating capabilities of AI agents, are we truly designing benchmarks that are challenging enough to drive meaningful progress, or are we simply documenting short-lived capability milestones?
+
+----
+
+> *FYI*: 📩 Subscribe and find More articles can be found in our dedicated [Blogs on Substack](https://casedonebyai.substack.com/).

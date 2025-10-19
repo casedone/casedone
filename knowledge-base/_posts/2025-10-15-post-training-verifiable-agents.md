@@ -167,3 +167,7 @@ The development of verifiable agentic AI is still very immature, lacking converg
 4. **Defining Intelligence**: How can we effectively compare different definitions of intelligence encapsulated in various benchmark suites?
 
 The collective community effort—including crowdsourcing environments, verifiers, and recipes—is essential to scale up RL and define intelligence holistically.
+
+----
+
+> *FYI*: 📩 Subscribe and find More articles can be found in our dedicated [Blogs on Substack](https://casedonebyai.substack.com/).

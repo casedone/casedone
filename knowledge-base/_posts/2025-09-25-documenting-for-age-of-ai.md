@@ -168,3 +168,6 @@ The path is clear. It begins with the foundational step of adopting **Markdown**
 
 This isn't just a tech-for-tech's-sake project. It's a strategic shift from creating static, passive documents to building a living, intelligent system. We're building the comprehensive "brain" that will turn our AI agents from helpful assistants into truly intelligent, autonomous teammates.
 
+----
+
+> *FYI*: 📩 Subscribe and find More articles can be found in our dedicated [Blogs on Substack](https://casedonebyai.substack.com/).
