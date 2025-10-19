@@ -4,10 +4,16 @@ title:  "Post-Training Verifiable Agents - Technical Guide"
 date:   2025-10-15 07:00:00 +0700
 categories:
     - "Agentic AI"
+excerpt_override: "Learn how to build post-training verifiable agentic AI systems, contrasting them with traditional models and outlining the critical training steps."
 featured_image: "/assets/images/blog/2025-10-15-post-training-verifiable-agents/post-training-verifiable-agents.png"
 ---
 
 This guide distills the core concepts and methodologies necessary for understanding and building post-training verifiable agentic AI systems, contrasting them with traditional models and outlining the critical training steps. It is based on a lecture by Jiantao Jiao's [lecture video](https://www.youtube.com/live/3l0Zxus34es) in the [2025 Agentic AI MOOC by Berkeley RDI](https://agenticai-learning.org/f25).
+
+Furthermore, you can watch our lecture summary video [here](https://youtu.be/UW1Xwxx9JIw).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UW1Xwxx9JIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ---
 
