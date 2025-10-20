@@ -159,7 +159,7 @@ Good RL algorithms must focus on: **Train Longer**, **Train Harder**, and **Samp
 
 The development of verifiable agentic AI is still very immature, lacking convergence on the "right algorithm". The central challenge remains bridging the gap between human learning and system learning.
 
-### 5.1. Core Open Questions
+Core Open Questions
 
 1. **Environment Collection Design**: How can we mimic human learning by exposing models to many different environments? This requires defining the right design for a collection of open-source environments, evaluations, and algorithms.
 2. **Stability and Prioritization**: Humans focus on some lessons more than others. What is the right algorithm that allows the AI to do the same without compromising training stability?
