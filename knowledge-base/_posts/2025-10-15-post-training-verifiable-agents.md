@@ -21,7 +21,7 @@ Furthermore, you can watch our lecture summary video [here](https://youtu.be/UW1
 
 Agentic models represent a fundamental evolution from earlier large language models (LLMs) by changing the primary axis of alignment from human preference to verifiable environmental feedback.
 
-![LLMvsAgent](/assets/images/blog/2025-10-15-post-training-verifiable-agents/llm-vs-agent.png)
+![LLMvsAgent]({{ '/assets/images/blog/2025-10-15-post-training-verifiable-agents/llm-vs-agent.png' | relative_url }})
 
 ### 1.1. Maximizing Human Preference (Earlier Models)
 
@@ -41,7 +41,7 @@ This focus on maximizing correctness means agentic models are trained to accompl
 
 The journey to building verifiable agents begins with acquiring high-quality verifiable training data. Agentic models maximize verifiable reward by training on three core components: the **Environment**, **Tools**, and the **Verifier**. Diversity across all three components is considered critical.
 
-![tool-env-verifier](/assets/images/blog/2025-10-15-post-training-verifiable-agents/tool-env-verifier.png)
+![tool-env-verifier]({{ '/assets/images/blog/2025-10-15-post-training-verifiable-agents/tool-env-verifier.png' | relative_url }})
 
 ### 2.1. Environment
 
@@ -106,7 +106,7 @@ To prevent overfitting and track genuine progress, benchmarks themselves must be
 
 Training an agent means maximizing its ability to use tools to achieve correctness. This process is typically divided into two key stages to balance imitation and exploration.
 
-![Two-stage training](/assets/images/blog/2025-10-15-post-training-verifiable-agents/two-stage-training.png)
+![Two-stage training]({{ '/assets/images/blog/2025-10-15-post-training-verifiable-agents/two-stage-training.png' | relative_url }})
 
 ### 4.1. Stage 1: Supervised Fine-Tuning (SFT)
 
@@ -151,7 +151,7 @@ Good RL algorithms must focus on: **Train Longer**, **Train Harder**, and **Samp
 - **Parallel Reasoning**, ([GenSelect](https://arxiv.org/pdf/2507.17797)): Scaling up compute to sample many trajectories (e.g., 32+ answers).
 - **Beam Search Over Reasoning**, ([DeepConf](https://arxiv.org/pdf/2508.15260)): Confidence-based majority voting to discard trajectories with very low generation confidence before aggregation, ensuring only meaningful outputs are considered.
 
-![DeepConf](/assets/images/blog/2025-10-15-post-training-verifiable-agents/deepconf.png)
+![DeepConf]({{ '/assets/images/blog/2025-10-15-post-training-verifiable-agents/deepconf.png' | relative_url }})
 
 ---
 

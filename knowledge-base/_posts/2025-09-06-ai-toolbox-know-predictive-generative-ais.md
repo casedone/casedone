@@ -15,7 +15,7 @@ Broadly speaking, AI can be broken down into two main types:
 
 Let's dive into what makes them different and where each one shines.
 
-![Predictive vs Generative AI](/assets/images/blog/2025-09-06-ai-toolbox-know-predictive-generative-ais/ai-types-by-timeline.png)
+![Predictive vs Generative AI]({{ '/assets/images/blog/2025-09-06-ai-toolbox-know-predictive-generative-ais/ai-types-by-timeline.png' | relative_url }})
 
 ## Predictive AI: The Specialist
 Predictive AI is the specialist. It’s designed to do one specific task and do it really well, whether that’s analyzing sentiment, predicting stock prices, or classifying cat photos.

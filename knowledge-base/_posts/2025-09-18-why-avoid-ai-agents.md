@@ -10,7 +10,7 @@ featured_image: "/assets/images/blog/2025-09-18-why-avoid-ai-agents/why-avooid-a
 
 Thinking about building an AI agent? For most use cases, you should reconsider. While the concept of an autonomous system is compelling, it often leads to solutions that are harder to control, more expensive to run, and unnecessarily complex. This article breaks down the four critical reasons why building an agent is often a mistake and shows why a simpler approach is the smarter, more reliable path to success.
 
-![Avoid AI Agents](/assets/images/blog/2025-09-18-why-avoid-ai-agents/why-avooid-ai-agents-01.png)
+![Avoid AI Agents]({{ '/assets/images/blog/2025-09-18-why-avoid-ai-agents/why-avooid-ai-agents-01.png' | relative_url }})
 
 ### 1. It's Massive Over-engineering 🏗️
 Most problems don't need a complex, multi-step agent that can think for itself. Using an agent for a simple task is like using a bulldozer to plant a single flower.

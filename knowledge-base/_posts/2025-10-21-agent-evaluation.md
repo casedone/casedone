@@ -20,7 +20,7 @@ Evaluation provides a systematic and reproducible way to measure the performance
 
 The establishment of fair, reproducible comparison across different models and agents makes evaluation the foundational mechanism for tracking performance, assessing risk, and ensuring safe and effective deployment.
 
-<img src="/assets/images/blog/2025-10-21-agent-evaluation/are-ai-actually-any-good.png" alt="Are AI any good?" style="max-width: 600px; width: 100%; height: auto;">
+<img src="{{ '/assets/images/blog/2025-10-21-agent-evaluation/are-ai-actually-any-good.png' | relative_url }}" alt="Are AI any good?" style="max-width: 600px; width: 100%; height: auto;">
 
 ## The Agentic Complexity Shift
 
@@ -28,7 +28,7 @@ LLMs traditionally operate in a simple, static environment, primarily handling t
 
 This shift mandates more complicated evaluation methods. Evaluation systems must account for complex interactions, state changes within the environment, and the agent's ability to coordinate multiple steps to complete a task.
 
-<img src="/assets/images/blog/2025-10-21-agent-evaluation/llm-vs-agent.png" alt="Traditional LLM vs Agentic LLM" style="max-width: 600px; width: 100%; height: auto;">
+<img src="{{ '/assets/images/blog/2025-10-21-agent-evaluation/llm-vs-agent.png' | relative_url }}" alt="Traditional LLM vs Agentic LLM" style="max-width: 600px; width: 100%; height: auto;">
 
 ## Taxonomy of Agent Evaluation Tasks
 
@@ -52,7 +52,7 @@ For non-verifiable, open-ended tasks, evaluation typically relies on two common,
 
 A "good" evaluation system must satisfy the criteria of **Outcome Validity**.
 
-<img src="/assets/images/blog/2025-10-21-agent-evaluation/outcome-validity.png" alt="Output Validity" style="max-width: 600px; width: 100%; height: auto;">
+<img src="{{ '/assets/images/blog/2025-10-21-agent-evaluation/outcome-validity.png' | relative_url }}" alt="Output Validity" style="max-width: 600px; width: 100%; height: auto;">
 
 Outcome validity ensures that the evaluation results produced by the system truly reflect the successful completion of the task and the desired AI's capabilities. For instance, when judging text results, simple string matching may fail to account for semantically equivalent, but non-identical, answers or redundant wording.
 

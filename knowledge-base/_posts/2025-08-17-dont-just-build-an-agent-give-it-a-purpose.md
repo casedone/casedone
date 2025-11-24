@@ -14,7 +14,7 @@ The world of AI is buzzing with a new term: **agents**. If you're in the tech sp
 As an engineer who has been in the trenches of AI development for years, I've seen this excitement before. But I've also seen the #1 mistake that brilliant teams make: building a technically impressive agent that does... well, nothing of value. They fall in love with the how and completely forget the why.
 This series is your guide to avoiding that trap. We're going to build an AI agent from the ground up, but we're going to do it the right way. And it all starts with the most critical, yet often overlooked, phase: planning. Before you write a single line of code, you need to give your agent a mission.
 
-![Agent vs Assistant](/assets/images/blog/2025-08-17-dont-just-build-an-agent-give-it-a-purpose/agent-vs-assistant.jpg)
+![Agent vs Assistant]({{ '/assets/images/blog/2025-08-17-dont-just-build-an-agent-give-it-a-purpose/agent-vs-assistant.jpg' | relative_url }})
 
 
 ### What is an "Agentic" AI Solution, Anyway?
@@ -39,7 +39,7 @@ To figure out if you truly need an agent, ask yourself these questions about the
 
 Many powerful AI solutions are not agentic. They are well-designed systems that use LLMs for what they do best—understanding and generating language—within a predictable and reliable structure. Don't chase the "agent" buzzword if a simpler, safer solution will solve your problem more effectively.
 
-![Agentic or Not](/assets/images/blog/2025-08-17-dont-just-build-an-agent-give-it-a-purpose/agentic-or-not.jpg)
+![Agentic or Not]({{ '/assets/images/blog/2025-08-17-dont-just-build-an-agent-give-it-a-purpose/agentic-or-not.jpg' | relative_url }})
 
 The above image displays a simple thought process to help you determine if Agent AI is what you need. With a task in mind, ask yourself
 
@@ -68,7 +68,7 @@ Your agent needs a well-defined North Star, which mainly involves:
 *   **The Agent's Identity:** The mission defines the agent's persona and purpose. Is it a helpful customer service assistant? A ruthless data analyst? A creative marketing copywriter? This identity, which you'll later encode in a system prompt, governs its tone, behavior, and the boundaries it operates within.
 *   **The Agent's Toolkit:** The mission determines what tools the agent needs to do its job. An agent designed to book flights needs access to airline APIs and a calendar, not a code interpreter. An agent built for market research needs web search and data analysis tools. The mission clarifies what "hands and eyes" your agent needs.
 
-![Agentic Example](/assets/images/blog/2025-08-17-dont-just-build-an-agent-give-it-a-purpose/agent-use-case-example.jpg)
+![Agentic Example]({{ '/assets/images/blog/2025-08-17-dont-just-build-an-agent-give-it-a-purpose/agent-use-case-example.jpg' | relative_url }})
 
 ### Simple, High-Impact Examples
 

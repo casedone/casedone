@@ -22,7 +22,7 @@ Think of it like an open-book exam. A standard LLM is like a student trying to a
 
 For business, the open book can be your company’s standard of procedure, FAQs, client’s profile, etc. Implementing RAG allows the LLM to answer to both your employees or your customers based on facts.
 
-![RAG Basic](/assets/images/blog/2025-10-07-what-is-rag-a-guide-for-business/rag-process-1.jpg)
+![RAG Basic]({{ '/assets/images/blog/2025-10-07-what-is-rag-a-guide-for-business/rag-process-1.jpg' | relative_url }})
 
 ## RAG vs Fine-tuning
 
@@ -32,7 +32,7 @@ Let’s dig a bit deeper. In extending LLM capabilities, you have two primary op
 
 **Retrieval-Augmented Generation (RAG)**, in contrast, provides the LLM with real-time external information during inference. By fetching data from a knowledge base to augment the user’s prompt, RAG relies heavily on external knowledge. In its most common form, you do not change the operating LLM at all. For RAG, your main challenge is the retrieval of information for the LLM to answer. The complexity unfolds if your sources of information are poorly managed in quality or quantity.
 
-![RAG vs Fine-tuning](/assets/images/blog/2025-10-07-what-is-rag-a-guide-for-business/rag-vs-fine-tuning.png)
+![RAG vs Fine-tuning]({{ '/assets/images/blog/2025-10-07-what-is-rag-a-guide-for-business/rag-vs-fine-tuning.png' | relative_url }})
 
 ## Why is RAG So Crucial for AI Agents?
 
@@ -60,7 +60,7 @@ Instead of being a generalist, RAG transforms your AI into a specialist with dee
 
 5. **Insightful Financial Analysis**: Financial advisors can use RAG agents to get a real-time pulse on the market. The AI can analyze current market data, financial reports, and breaking news to provide up-to-the-minute insights and generate detailed reports, enabling faster, data-driven decisions.
 
-![RAG Example](/assets/images/blog/2025-10-07-what-is-rag-a-guide-for-business/rag-process-2.jpg)
+![RAG Example]({{ '/assets/images/blog/2025-10-07-what-is-rag-a-guide-for-business/rag-process-2.jpg' | relative_url }})
 
 ## The Business Bottom Line: Why You Need RAG
 

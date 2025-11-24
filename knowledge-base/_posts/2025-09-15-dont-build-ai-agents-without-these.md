@@ -11,7 +11,7 @@ featured_image: "/assets/images/blog/2025-09-15-dont-build-ai-agents-without-the
 
 In our previous post, we explored why you shouldn't just build an agent, but [give it a purpose](https://www.casedone.ai/posts/2025-08-17-dont-just-build-an-agent-give-it-a-purpose/). We covered the core principles that make an AI system truly "agentic," moving beyond simple automation to tackle complex, goal-oriented tasks.
 
-![AI agents are made of a brain, eyes, hands, and a mind](/assets/images/blog/2025-09-15-dont-build-ai-agents-without-these/image-1.png)
+![AI agents are made of a brain, eyes, hands, and a mind]({{ '/assets/images/blog/2025-09-15-dont-build-ai-agents-without-these/image-1.png' | relative_url }})
 
 Now that you understand the "why," it's time to dive into the "how." An agent is more than just a powerful LLM—it's a complete system. To bring your purpose-driven agent to life, you need to assemble its core components:
 - **Brain**: to think
@@ -57,7 +57,7 @@ What happens when you have multiple agents, potentially built by different teams
 - [**MCP (Model-Context Protocol)**](https://docs.anthropic.com/en/docs/mcp): Think of this as the "USB-C port" for AI. It's a standard that defines how an agent (the computer) connects to its various tools (the peripherals).
 - [**A2A**](https://github.com/a2aproject/A2A) & ACP: These are competing standards that act as "universal translators" for agent-to-agent communication, allowing them to collaborate on complex tasks.
 
-![MCP, A2A, ACP are protocols allowing AI agents to communicate with each other.](/assets/images/blog/2025-09-15-dont-build-ai-agents-without-these/image-3.png)
+![MCP, A2A, ACP are protocols allowing AI agents to communicate with each other.]({{ '/assets/images/blog/2025-09-15-dont-build-ai-agents-without-these/image-3.png' | relative_url }})
 
 ### The Secret Sauce: Context Engineering
 Having all the right components isn't enough. The real art of building a high-performance agent lies in Context Engineering. An LLM's context window—its short-term memory—is a finite and valuable resource. As you add more tools, conversational history, and retrieved knowledge, that window can quickly become cluttered, degrading the agent's performance.
@@ -66,7 +66,7 @@ Context Engineering is the discipline dedicated to solving this. It is the strat
 
 To start learning about context engineering, here is a [survey](https://arxiv.org/abs/2507.13334) as of July 2025.
 
-![Context Engineering survey](/assets/images/blog/2025-09-15-dont-build-ai-agents-without-these/image-2.png)
+![Context Engineering survey]({{ '/assets/images/blog/2025-09-15-dont-build-ai-agents-without-these/image-2.png' | relative_url }})
 
 
 ### Conclusion: Building Your First Agent

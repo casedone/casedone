@@ -13,7 +13,7 @@ Let's talk about something I've learned firsthand while leading our AI transform
 
 For years, we've been creating docs the old way—scattered Word files, complex slide decks, and PDFs. This system worked for us humans (mostly), but for the new wave of AI agents we're bringing in to automate tasks, it's a nightmare.
 
-![Old Documentation](/assets/images/blog/2025-09-25-documenting-for-age-of-ai/documenting-for-ai.png)
+![Old Documentation]({{ '/assets/images/blog/2025-09-25-documenting-for-age-of-ai/documenting-for-ai.png' | relative_url }})
 
 My big "aha!" moment came when we realized our shiny new AI agents were basically stumbling around in the dark. They couldn't make sense of our procedures because the information was locked in formats that are hard for AI to understand. An AI can't "read" a PDF layout or a PowerPoint slide the way we do, and it certainly can't easily understand an information table embedded in an image.
 
@@ -144,7 +144,7 @@ The real game-changer, though, is building a Knowledge Graph. This is the most p
 
 Think of this as the ultimate brain for our company. A knowledge graph represents information as a network of entities and the relationships between them. It knows that "Project Falcon" is a project, that Maria is the project manager, and that it uses the Authentication API. This structure solves major AI challenges that even well-structured Markdown can't. It allows the AI to disambiguate between "John in Accounting" and "John in Engineering" because their relationships are explicitly defined. It enables precise retrieval and complex reasoning, allowing an AI to answer sophisticated questions by following the connections in the graph. When an AI can query that web of relationships, it can reason, infer, and see the big picture.
 
-![Knowledge Graph example from neo4j](/assets/images/blog/2025-09-25-documenting-for-age-of-ai/knowledge-graph.png)
+![Knowledge Graph example from neo4j]({{ '/assets/images/blog/2025-09-25-documenting-for-age-of-ai/knowledge-graph.png' | relative_url }})
 
 ## How We're Managing All of This: "Docs as Code"
 
