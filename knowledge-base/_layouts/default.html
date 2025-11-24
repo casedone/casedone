@@ -195,7 +195,7 @@
                     
                     // If we're not on the knowledge base index page, navigate there with the category parameter
                     if (!isKnowledgeBasePage) {
-                        const baseUrl = window.location.origin + '/knowledge-base/';
+                        const baseUrl = "{{ '/knowledge-base/' | relative_url }}";
                         if (category === 'all') {
                             window.location.href = baseUrl;
                         } else {
