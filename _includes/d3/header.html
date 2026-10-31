@@ -1,0 +1,20 @@
+{%- comment -%}
+  D3 site header. Pass page="home" | "writing" | "work" | "courses" | "article"
+  so the current section is marked in the nav.
+{%- endcomment -%}
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="site-mark" href="{{ '/d3/' | relative_url }}">Pisek Kultavewuti<span class="full"> — Bangkok</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      {%- if include.page == 'home' %}
+      <a href="#writing" aria-current="page">Writing</a>
+      {%- else %}
+      <a href="{{ '/d3/writing.html' | relative_url }}"{% if include.page == 'writing' %} aria-current="page"{% endif %}>Writing</a>
+      {%- endif %}
+      <a href="{{ '/d3/work.html' | relative_url }}"{% if include.page == 'work' %} aria-current="page"{% endif %}>Work</a>
+      <a href="{{ '/d3/work.html' | relative_url }}" class="nav-hire">Hire me</a>
+      <a href="{{ '/d3/' | relative_url }}#about">About</a>
+      <a href="{{ '/d3/' | relative_url }}#subscribe">Subscribe</a>
+    </nav>
+  </div>
+</header>

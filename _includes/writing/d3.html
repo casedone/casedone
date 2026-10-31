@@ -1,0 +1,19 @@
+{%- comment -%}
+  D3 — the home-page writing block: cover story + "More writing" + three cards.
+  Drop-in replacement for the hand-written post cards. Reads knowledge-base/_posts.
+{%- endcomment -%}
+{%- assign writing_url = include.writing_url | default: '/writing/' | relative_url %}
+
+{%- assign pinned = site.posts | where: "featured", true | first -%}
+{%- assign lead = pinned | default: site.posts.first -%}
+
+  {% include writing/d3-lead.html articles_to=include.articles_to %}
+
+  <div class="shell" id="writing">
+    <div class="section__head" style="border-top:1px solid var(--rule);padding-top:1.1rem;">
+      <h2 class="section__title">More writing</h2>
+      <a class="section__more" href="{{ writing_url }}">All {{ site.posts | size }} articles &rarr;</a>
+    </div>
+
+  {% include writing/d3-list.html limit=3 skip=lead.url articles_to=include.articles_to %}
+  </div>
