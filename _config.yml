@@ -50,4 +50,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - instructions-for-ai/
+  - revamping-project/
   - dev
+
+# Render post dates in Bangkok time (GitHub builds in UTC, front matter is +0700)
+timezone: Asia/Bangkok
