@@ -1,21 +1,25 @@
+---
+layout: null
+---
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Pisek Kultavewuti",
+  "short_name": "Pisek",
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.png",
+      "src": "{{ '/web-app-manifest-192x192.png' | relative_url }}",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png",
+      "src": "{{ '/web-app-manifest-512x512.png' | relative_url }}",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#F7F4EC",
+  "background_color": "#F7F4EC",
+  "display": "standalone",
+  "start_url": "{{ '/' | relative_url }}"
 }

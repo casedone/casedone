@@ -1,39 +1,18 @@
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <a href="{{ '/' | relative_url }}"><img src="{{ '/images/logo.png' | relative_url }}"
-                        alt="Case Done Logo"></a>
-                <p>AI Expertise for the Modern Business</p>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="{{ '/' | relative_url }}#courses">Courses</a></li>
-                        <li><a href="{{ '/' | relative_url }}#previous-work">Previous Work</a></li>
-                        <li><a href="{{ '/knowledge-base/' | relative_url }}">Knowledge Base</a></li>
-                        <li><a href="{{ '/' | relative_url }}#about">About</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Connect With Us</h4>
-                    <div class="footer-social-links">
-                        <a href="https://www.youtube.com/@CaseDonebyAI" target="_blank" aria-label="YouTube"><i
-                                class="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/company/casedonebyai" target="_blank" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/casedonebyai" target="_blank" aria-label="x"><i class="fab fa-x"></i></a>
-                        <a href="https://github.com/casedone" target="_blank" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://casedonebyai.substack.com" target="_blank" aria-label="Substack"><i
-                                class="fas fa-newspaper"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2025</span> Case Done. All rights reserved.</p>
-        </div>
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <p class="footer-name">{{ site.author }}</p>
+      <p class="footer-note">
+        Writing on AI systems and the work of making them useful.<br>
+        Training &amp; advisory via Case Done &middot; Bangkok, Thailand &middot; {{ site.time | date: "%Y" }}
+      </p>
     </div>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="{{ site.substack_url }}" target="_blank" rel="noopener">Substack</a>
+      <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <a href="{{ '/' | relative_url }}#subscribe">Email</a>
+    </nav>
+  </div>
 </footer>

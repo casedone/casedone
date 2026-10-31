@@ -1,9 +1,0 @@
-{%- comment -%} Preview-only page switcher. Delete this include when the D3 pages are promoted to the site root. {%- endcomment -%}
-<div class="mock-bar">
-  <span style="opacity:.55">D3</span>
-  <a href="{{ '/d3/' | relative_url }}"{% if include.page == 'home' %} aria-current="page"{% endif %}>Home</a>
-  <a href="{{ '/d3/writing.html' | relative_url }}"{% if include.page == 'writing' %} aria-current="page"{% endif %}>Writing</a>
-  <a href="{{ '/d3/work.html' | relative_url }}"{% if include.page == 'work' %} aria-current="page"{% endif %}>Work</a>
-  <a href="{{ '/d3/courses.html' | relative_url }}"{% if include.page == 'courses' %} aria-current="page"{% endif %}>Courses</a>
-  <a href="{{ '/d3/article.html' | relative_url }}"{% if include.page == 'article' %} aria-current="page"{% endif %}>Article</a>
-</div>
