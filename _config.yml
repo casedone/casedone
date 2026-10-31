@@ -1,53 +1,43 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Site identity
+title: Pisek Kultavewuti
+tagline: AI systems, agents, and the work of making them useful.
+description: >-
+  Writing by Pisek Kultavewuti on AI systems, agent architecture and evaluation,
+  and what it actually takes to put AI to work inside a business. Advisory and
+  training through Case Done.
+author: Pisek Kultavewuti
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: CaseDone Knowledge Base
-description: >- # this means to ignore newlines until "baseurl:"
-  The official knowledge base for CaseDone services and products.
-baseurl: "/casedone" # the subpath of your site, e.g. /blog
-url: "https://casedone.github.io" # the base hostname & protocol for your site
+url: "https://kpisek.com"
+# Previews still serve from the project page, so the repo subpath stays until the
+# custom domain resolves. Every internal path goes through relative_url, which
+# makes removing this line the entire migration.
+baseurl: "/casedone"
+
+# Contact and elsewhere
+substack_url: "https://casedonebyai.substack.com"
+linkedin_url: "https://www.linkedin.com/company/casedonebyai"
+github_url: "https://github.com/casedone"
 
 # Build settings
 markdown: kramdown
+# GitHub Pages builds in UTC; front matter is written +0700, so dates would render
+# a day early without this.
+timezone: Asia/Bangkok
+permalink: /writing/:title/
 
-# Collections and layout configuration
-collections:
-  posts:
-    output: true
-    permalink: /:collection/:name/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav: article
 
-# Layout directory
-layouts_dir: knowledge-base/_layouts
-
-# Include knowledge-base directory
-include:
-  - knowledge-base
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 exclude:
-  - .gitignore
   - README.md
-  - CNAME
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - instructions-for-ai/
-  - dev
+  - vendor
+  - .bundle
+  - CNAME

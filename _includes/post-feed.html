@@ -1,0 +1,17 @@
+{%- comment -%}
+  Home-page writing block: the cover story, then a short "More writing" run.
+  Same includes the writing index uses, so both read _posts and cannot drift.
+{%- endcomment -%}
+{%- assign pinned = site.posts | where: "featured", true | first -%}
+{%- assign lead = pinned | default: site.posts.first -%}
+
+  {% include post-lead.html %}
+
+  <div class="shell" id="writing">
+    <div class="section__head" style="border-top:1px solid var(--rule);padding-top:1.1rem;">
+      <h2 class="section__title">More writing</h2>
+      <a class="section__more" href="{{ '/writing/' | relative_url }}">All {{ site.posts | size }} articles &rarr;</a>
+    </div>
+
+  {% include post-list.html limit=3 skip=lead.url %}
+  </div>

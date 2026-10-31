@@ -1,0 +1,28 @@
+{%- comment -%}
+  Cover story — the lead article. Reads _posts/*.md:
+  lead = the post with `featured: true` in front matter, else the newest post.
+  `dek`, `tag` and `read_time` in front matter are optional overrides; without them
+  the post's excerpt, last category and a 180-wpm estimate are used.
+{%- endcomment -%}
+{%- assign pinned = site.posts | where: "featured", true | first -%}
+{%- assign lead = pinned | default: site.posts.first -%}
+{%- assign lead_tag = lead.tag | default: lead.categories.last -%}
+{%- assign lead_dek = lead.dek | default: lead.excerpt_override | default: lead.excerpt -%}
+{%- assign lead_rt = lead.read_time -%}
+{%- if lead_rt == nil -%}{%- assign lead_words = lead.content | strip_html | number_of_words -%}{%- assign lead_rt = lead_words | divided_by: 180 | plus: 1 -%}{%- endif -%}
+
+  <div class="shell">
+    <article class="story">
+      <div>
+        <p class="story__k"><span class="bar"></span>Latest &mdash; {{ lead_tag }}</p>
+        <h2><a href="{{ lead.url | relative_url }}">{{ lead.title | smartify }}</a></h2>
+        <p class="story__dek">{{ lead_dek | strip_html | normalize_whitespace | truncate: 260 }}</p>
+        <p class="story__meta"><span>{{ lead.date | date: "%-d %b %Y" }}</span><span>{{ lead_rt }} min read</span><a href="{{ lead.url | relative_url }}">Read the article &rarr;</a></p>
+      </div>
+      {%- if lead.featured_image %}
+      <a class="story__media" href="{{ lead.url | relative_url }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ lead.featured_image | relative_url }}" alt="">
+      </a>
+      {%- endif %}
+    </article>
+  </div>
