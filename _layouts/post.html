@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{%- assign older = page.previous -%}
+{%- assign newer = page.next -%}
+{%- assign rt = page.read_time -%}
+{%- assign words = content | strip_html | number_of_words -%}
+{%- if rt == nil -%}{%- assign rt = words | divided_by: 180 | plus: 1 -%}{%- endif -%}
+
+  <article>
+    <header class="shell post-header column">
+      <p class="eyebrow"><a href="{{ '/writing/' | relative_url }}" style="color:var(--accent)">Writing</a><span class="dot"></span><span>{{ page.categories.last }}</span></p>
+      <h1>{{ page.title | smartify }}</h1>
+      {%- assign dek = page.dek | default: page.excerpt_override | default: page.excerpt -%}
+      <p class="standfirst">{{ dek | strip_html | normalize_whitespace }}</p>
+      <div class="post-meta">
+        <span>{{ page.date | date: "%-d %B %Y" }}</span>
+        <span class="sep">/</span>
+        <span>{{ rt }} min read</span>
+        <span class="sep">/</span>
+        <span>{{ words }} words</span>
+      </div>
+    </header>
+
+{%- if page.featured_image %}
+    <figure class="art-hero">
+      <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title | smartify }}">
+    </figure>
+{%- endif %}
+    <div class="shell">
+      <div class="column prose">
+
+{{ content }}
+
+        <nav class="next-prev" aria-label="More writing">
+{%- if older %}
+          <a href="{{ older.url | relative_url }}">
+            <span class="label">&larr; Previous</span>
+            <span class="title">{{ older.title | smartify }}</span>
+          </a>
+{%- endif %}
+{%- if newer %}
+          <a href="{{ newer.url | relative_url }}" class="right">
+            <span class="label">Next &rarr;</span>
+            <span class="title">{{ newer.title | smartify }}</span>
+          </a>
+{%- else %}
+          <a href="{{ '/writing/' | relative_url }}" class="right">
+            <span class="label">All writing &rarr;</span>
+            <span class="title">{{ site.posts | size }} articles</span>
+          </a>
+{%- endif %}
+        </nav>
+
+      </div>
+    </div>
+  </article>
