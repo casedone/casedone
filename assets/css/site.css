@@ -1,0 +1,188 @@
+@import url("base.css");
+
+/* =========================================================================
+   D3 — "Cover": photographs lead. The most image-forward of the three.
+   A magazine cover device (photo bleeding edge to edge, text plate overlapping
+   it), then an editorial run of story cards, then a photo essay.
+   Keeps D's rule that DARK means the practice band — the cover is photographic,
+   not dark-for-its-own-sake.
+   ========================================================================= */
+
+html { overflow-x: clip; }
+body { font-size: 19.5px; }
+
+/* ---------- cover: full-bleed photo + overlapping text plate ---------- */
+.cover {
+  width: 100vw; margin-left: calc(50% - 50vw);
+  position: relative; background: var(--paper-2);
+}
+.cover__photo { position: relative; }
+/* The crop is proportional, not a fixed pixel height: a fixed height let the box
+   aspect run away from the photo's 3:2 as the viewport widened, so a centred
+   crop ate the top of the frame (and the subject's head with it). aspect-ratio
+   keeps the box near the photo's own shape; max-height stops it dominating tall
+   screens. object-position is biased upward because the subject sits high in
+   the frame — at 3:1 the visible window still starts above his head. */
+.cover__photo img {
+  width: 100%; display: block;
+  aspect-ratio: 16/9; max-height: 76vh;
+  object-fit: cover; object-position: 50% 12%;
+  filter: saturate(.72) contrast(1.04) brightness(.94);
+}
+.cover__photo::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(20,32,26,.14), rgba(20,32,26,0) 40%, rgba(20,32,26,.30));
+}
+.cover__kind {
+  position: absolute; top: 1.1rem; left: var(--gutter); z-index: 2;
+  font-family: var(--mono); font-size: .64rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--on-night); background: color-mix(in srgb, var(--night) 72%, transparent);
+  padding: .3rem .5rem; border-radius: 2px;
+}
+
+.plate {
+  position: relative; z-index: 3;
+  margin-top: clamp(-5rem, -7vw, -3rem);
+  background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 3px;
+  padding: clamp(1.5rem, 3.6vw, 2.6rem);
+  max-width: 720px;
+  box-shadow: 0 1px 0 var(--rule);
+}
+.plate h1 {
+  font-size: clamp(2.05rem, 4.6vw, 3.1rem); font-weight: 500; line-height: 1.07;
+  letter-spacing: -.022em; margin-top: .9rem; text-wrap: balance;
+}
+.plate .plate-role {
+  margin-top: .9rem; font-size: .99rem; color: var(--muted); max-width: 46ch; line-height: 1.6;
+}
+.plate .plate-lede {
+  margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--rule);
+  font-size: 1.05rem; color: var(--ink-soft); max-width: 56ch; text-wrap: pretty;
+}
+.plate .plate-lede strong { color: var(--ink); font-weight: 600; }
+.plate .plate-punch { margin-top: .6rem; font-size: 1.05rem; font-weight: 600; color: var(--ink); max-width: 56ch; text-wrap: pretty; }
+.plate h1 .nb { white-space: nowrap; }
+.plate__links {
+  margin-top: 1.3rem; display: flex; flex-wrap: wrap; gap: 1.3rem;
+  font-family: var(--mono); font-size: .74rem; letter-spacing: .07em; text-transform: uppercase;
+}
+.plate__links a { color: var(--green); border-bottom: 1px solid color-mix(in srgb, var(--green) 35%, transparent); padding-bottom: 2px; }
+.plate__links a:hover { border-bottom-color: var(--green); }
+
+/* ---------- cover story: big story, 4:5 image ---------- */
+.story {
+  display: grid; grid-template-columns: 1fr 400px; gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start; padding-block: clamp(2.5rem, 5vw, 3.75rem);
+}
+.story__media { display: block; aspect-ratio: 4/5; overflow: hidden; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 2px; }
+.story__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.story:hover .story__media img { transform: scale(1.025); }
+.story__k {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--green); display: flex; gap: .6rem; align-items: center;
+}
+.story__k .bar { width: 22px; height: 1px; background: var(--green-bright); }
+.story h2 {
+  font-size: clamp(1.85rem, 4vw, 2.6rem); font-weight: 500; line-height: 1.1;
+  letter-spacing: -.02em; margin-top: .8rem; max-width: 20ch; text-wrap: balance;
+}
+.story h2 a { background-image: linear-gradient(var(--green), var(--green)); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .35s var(--ease); }
+.story:hover h2 a { background-size: 100% 1px; }
+.story__dek { margin-top: 1rem; font-size: 1.08rem; color: var(--ink-soft); max-width: 52ch; text-wrap: pretty; }
+.story__meta {
+  margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--muted); display: flex; gap: 1.2rem; flex-wrap: wrap;
+}
+.story__meta a { color: var(--green); }
+
+/* ---------- editorial run: 3 tall cards ---------- */
+.run { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2.5vw, 1.9rem); padding-block: .5rem 1.5rem; }
+.tcard { display: flex; flex-direction: column; min-width: 0; }
+.tcard__media { display: block; aspect-ratio: 5/6; overflow: hidden; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 2px; margin-bottom: 1rem; }
+.tcard__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s var(--ease); }
+.tcard:hover .tcard__media img { transform: scale(1.03); }
+.tcard__k { font-family: var(--mono); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--green); }
+.tcard h3 { font-size: clamp(1.1rem, 2vw, 1.3rem); font-weight: 500; line-height: 1.26; letter-spacing: -.012em; margin-top: .4rem; text-wrap: pretty; }
+.tcard h3 a { background-image: linear-gradient(var(--green), var(--green)); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .3s var(--ease); }
+.tcard:hover h3 a { background-size: 100% 1px; }
+.tcard p { margin-top: .45rem; font-size: .92rem; color: var(--muted); line-height: 1.55; }
+.tcard__meta { margin-top: auto; padding-top: .9rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+
+/* ---------- photo essay ---------- */
+.essay { padding-block: clamp(2.5rem, 5vw, 3.5rem); border-top: 1px solid var(--rule); }
+.essay__head { display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.6rem; }
+.essay-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 1.1rem; align-items: start; }
+.essay-grid figure { margin: 0; }
+.essay-grid img { width: 100%; object-fit: cover; border: 1px solid var(--rule); border-radius: 2px; }
+.essay-grid .big img { aspect-ratio: 16/10; }
+.essay-grid .small { display: grid; gap: 1.1rem; }
+.essay-grid .small img { aspect-ratio: 16/11; }
+.essay-grid figcaption {
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .04em; color: var(--muted);
+  margin-top: .55rem; line-height: 1.7; text-transform: uppercase;
+}
+.essay-grid figcaption b { color: var(--ink); font-weight: 500; }
+
+/* ---------- practice band: narrow, photo on the left ---------- */
+.night--d3 { padding-block: clamp(2.75rem, 5vw, 4rem); }
+.night--d3 .split { display: grid; grid-template-columns: 300px 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.night--d3 figure { margin: 0; }
+.night--d3 figure img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border: 1px solid var(--night-rule); filter: saturate(.7) contrast(1.03) brightness(.95); }
+.night--d3 figure figcaption { font-family: var(--mono); font-size: .6rem; letter-spacing: .05em; text-transform: uppercase; color: var(--on-night-muted); margin-top: .5rem; line-height: 1.7; }
+.night--d3 h2.big { font-size: clamp(1.6rem, 3.4vw, 2.1rem); font-weight: 500; letter-spacing: -.018em; line-height: 1.16; margin-top: .8rem; max-width: 26ch; }
+.rowlist { margin-top: 1.5rem; border-top: 1px solid var(--night-rule); }
+.rowlist a {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1.2rem;
+  padding-block: .85rem; border-bottom: 1px solid var(--night-rule);
+}
+.rowlist .t { font-size: 1.02rem; }
+.rowlist .k { font-family: var(--mono); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--on-night-muted); white-space: nowrap; }
+.rowlist a:hover .t { color: var(--green-bright); }
+
+/* ---------- article ---------- */
+.art-hero { margin-top: 1.8rem; }
+.art-hero img { width: 100%; aspect-ratio: 4/5; max-height: 520px; object-fit: cover; border: 1px solid var(--rule); border-radius: 2px; background: var(--paper-2); }
+.fig-wide { margin-block: 2.2rem; }
+.fig-wide img { width: 100%; border: 1px solid var(--rule); border-radius: 2px; background: var(--paper-2); }
+.fig-wide figcaption { font-family: var(--mono); font-size: .7rem; color: var(--muted); margin-top: .6rem; letter-spacing: .03em; line-height: 1.65; }
+.pull {
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  margin-block: 2.2rem; padding-block: 1.4rem;
+  font-size: clamp(1.25rem, 2.6vw, 1.5rem); line-height: 1.42; color: var(--ink);
+  letter-spacing: -.012em; text-wrap: pretty;
+}
+
+/* ---------- enquire band (work page) ---------- */
+.enquire-band { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; }
+.enquire-actions { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: flex-end; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1000px) {
+  .story { grid-template-columns: 1fr 300px; }
+  .night--d3 .split { grid-template-columns: 220px 1fr; }
+  .run { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 780px) {
+  .plate { margin-top: -2.5rem; max-width: none; }
+  .story { grid-template-columns: 1fr; }
+  .story__media { aspect-ratio: 4/3; max-width: 100%; }
+  .run { grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .essay-grid { grid-template-columns: 1fr; }
+  .night--d3 .split { grid-template-columns: 1fr; }
+  .night--d3 figure { max-width: 240px; }
+  .night--d3 figure img { aspect-ratio: 1; }
+  .enquire-band { grid-template-columns: 1fr; gap: 1.4rem; }
+  .enquire-actions { justify-content: flex-start; }
+}
+@media (max-width: 520px) {
+  .run { grid-template-columns: 1fr; }
+  /* Narrow screens crop the sides, not the top, so the frame can go squarer. */
+  .cover__photo img { aspect-ratio: 4/3; max-height: none; }
+}
+
+/* D3 only: article hero is a deliberate full-bleed band, caption stays in the column */
+.art-hero { width: 100vw; margin-left: calc(50% - 50vw); margin-block: 0 2rem; }
+.art-hero img { width: 100%; aspect-ratio: 21/9; max-height: 460px; object-fit: cover; border: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); border-radius: 0; }
+.art-hero figcaption { max-width: var(--shell); margin-inline: auto; padding: .6rem var(--gutter) 0; font-family: var(--mono); font-size: .68rem; color: var(--muted); letter-spacing: .03em; }

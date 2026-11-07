@@ -1,303 +1,113 @@
 ---
-layout: null
+layout: default
+title: Pisek Kultavewuti
+nav: home
+description: Pisek Kultavewuti — AI Deputy Director at CJ Express Group, writing about building AI a large retailer actually runs on.
 ---
-<!DOCTYPE html>
-<html lang="en">
+  <!-- ===================== cover ===================== -->
+  <section class="cover">
+    <div class="cover__photo">
+      <p class="cover__kind">Bangkok &middot; October 2026</p>
+      <img src="{{ '/assets/img/work/workshop-2.webp' | relative_url }}" alt="Pisek presenting to a room of workshop participants in Bangkok">
+    </div>
+  </section>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Done - AI Courses & Training</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+  <div class="shell">
+    <div class="plate">
+      <p class="eyebrow">
+        <span>Enterprise AI</span><span class="dot"></span>
+        <span>Agent architecture</span><span class="dot"></span>
+        <span>AI in production</span>
+      </p>
+      <h1>I build enterprise AI that a <span class="nb">2,500-store</span> retailer runs on.</h1>
+      <p class="plate-role">AI Deputy Director, CJ Express Group. I run the AI Centre of Excellence at head office: a forward-deployed team building computer vision, recommendation and agentic systems for 2,500 stores — plus the platform, evaluation and guardrails that let the rest of the company use them.</p>
+      <p class="plate-lede">
+        We run AI as an enterprise function, not a lab — and the work we put into production is where
+        being wrong costs money. What makes it safe to move fast is unglamorous: a four-layer control
+        model, sanctioned tools, real evaluation, and policy that clears PDPA and ISO/IEC 42001.
+      </p>
+      <p class="plate-punch">Governance isn&rsquo;t the point. It&rsquo;s the licence to try things.</p>
+      <div class="plate__links">
+        <a href="#writing">Read the writing</a>
+        <a href="{{ '/work/' | relative_url }}">Work with me</a>
+      </div>
+    </div>
+  </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17264049005">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  {% include post-feed.html %}
 
-        gtag('config', 'AW-17264049005');
-    </script>
+  <!-- ===================== photo essay ===================== -->
+  <div class="shell essay">
+    <div class="essay__head">
+      <h2 class="section__title">In the room</h2>
+      <a class="section__more" href="{{ '/work/' | relative_url }}">The practice &rarr;</a>
+    </div>
+    <div class="essay-grid">
+      <figure class="big">
+        <img src="{{ '/assets/img/work/workshop-1.webp' | relative_url }}" alt="Participants at laptops during the Generative AI × Data Analytics workshop">
+        <figcaption><b>GenAI &times; Data Analytics, cohort 1</b> — a one-day workshop taking a non-technical analytics team from prompt basics to a working retrieval assistant over their own data.</figcaption>
+      </figure>
+      <div class="small">
+        <figure>
+          <img src="{{ '/assets/img/work/training-1.webp' | relative_url }}" alt="Group photo of an in-house training cohort">
+          <figcaption><b>In-house programmes</b> — 8 organisations, 2024&ndash;25</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ '/assets/img/work/training-2.webp' | relative_url }}" alt="A large training hall with participants at laptops">
+          <figcaption><b>Corporate training</b> — 40 attendees, two cohorts</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
 
-    <!-- TikTok Pixel Code -->
-    <script>
-        !function (w, d, t) {
-            w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
-            ttq.load('D2KTITRC77U0CGBH8OTG');
-            ttq.page();
-        }(window, document, 'ttq');
-    </script>
-    <!-- End TikTok Pixel Code -->
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1788076008797666');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" src="https://www.facebook.com/tr?id=1788076008797666&ev=PageView
-    &noscript=1" />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
-</head>
-
-<body>
-    {% include navigation.html %}
-
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Elevate Your Business with <span class="highlight">Case Done</span></h1>
-                <p>Specialized courses and knowledge base to help you harness the power of AI and generative
-                    technologies.</p>
-            </div>
+  <!-- ===================== practice band ===================== -->
+  <section class="night night--d3" id="work">
+    <div class="shell split">
+      <figure>
+        <img src="{{ '/assets/img/work/workshop-2.webp' | relative_url }}" alt="Pisek presenting during an in-house training session">
+        <figcaption>In-house training &middot; Bangkok</figcaption>
+      </figure>
+      <div>
+        <h2 class="section__title">Work with me</h2>
+        <h2 class="big">Advisory and in-house training — kept in one place so the writing stays clean.</h2>
+        <div class="rowlist">
+          <a href="{{ '/work/' | relative_url }}"><span class="t">AI strategy &amp; architecture review</span><span class="k">Advisory &rarr;</span></a>
+          <a href="{{ '/work/' | relative_url }}"><span class="t">In-house programmes &amp; workshops</span><span class="k">Training &rarr;</span></a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="courses" class="courses">
-        <div class="container">
-            <div class="section-header">
-                <h2>AI Courses</h2>
-                <p>Comprehensive training programs designed to build your AI skills from the ground up</p>
-            </div>
-            <div class="course-cards">
-                <div class="card card-featured">
-                    <div class="course-image">
-                        <img src="courses/prompt-mastery-asset/prompt-mastery-course-title.jpg"
-                            alt="Prompt Mastery Course - Master AI Prompt Engineering" loading="lazy" width="400"
-                            height="200" />
-                        <div class="card-badge badge-available">Available Now</div>
-                    </div>
-                    <h3>Prompt Mastery</h3>
-                    <p>Master the art of crafting effective prompts for AI systems to get consistent, high-quality
-                        results.</p>
-                    <ul class="features">
-                        <li><i class="fas fa-check"></i> M.A.S.T.E.R. framework</li>
-                        <li><i class="fas fa-check"></i> From daily use to building Agentic AI applications </li>
-                        <li><i class="fas fa-check"></i> Real-world applications</li>
-                    </ul>
-                    <div class="card-buttons">
-                        <a href="courses/prompt-mastery.html" target="_blank" class="btn btn-outline">Learn More</a>
-                        <a href="https://courses.casedone.ai/purchase?product_id=6409616&user_src=embed_buy_button&embed=true"
-                            target="_blank" class="btn btn-primary">Buy Now</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>AI Agent Foundations</h3>
-                    <div class="card-badge badge-coming-soon">Coming Soon</div>
-                    <p>Learn the core principles behind AI agents and how to implement them for business automation.</p>
-                    <ul class="features">
-                        <li><i class="fas fa-check"></i> Agent architecture</li>
-                        <li><i class="fas fa-check"></i> Implementation strategies</li>
-                        <li><i class="fas fa-check"></i> Business use cases</li>
-                    </ul>
-                    <a href="https://courses.casedone.ai/p/subscribe" target="_blank" class="btn btn-outline">Join
-                        Waiting List</a>
-                </div>
-                <div class="card">
-                    <h3>LangGraph: Building AI Agents</h3>
-                    <div class="card-badge badge-coming-soon">Coming Soon</div>
-                    <p>Deep dive into LangGraph for creating sophisticated, multi-step AI agents and workflows.</p>
-                    <ul class="features">
-                        <li><i class="fas fa-check"></i> Advanced agent design</li>
-                        <li><i class="fas fa-check"></i> Complex reasoning flows</li>
-                        <li><i class="fas fa-check"></i> Production deployment</li>
-                    </ul>
-                    <a href="https://courses.casedone.ai/p/subscribe" target="_blank" class="btn btn-outline">Join
-                        Waiting List</a>
-                </div>
-            </div>
-            <div class="platform-note">
-                <p>All courses are hosted on <a href="https://courses.casedone.ai/l/products"
-                        target="_blank">Teachable</a> for an optimal learning experience.</p>
-            </div>
-        </div>
-    </section>
+  <!-- ===================== about ===================== -->
+  <section class="shell section" id="about">
+    <div class="about-strip">
+      <div>
+        <h2>About</h2>
+        <p>
+          I&rsquo;m Pisek. I run AI at CJ Express Group, the Thai retail group behind CJ Supermarket and
+          CJ More &mdash; 2,500 stores across Thailand. I run the AI Centre of Excellence at head
+          office: a team of forward-deployed engineers embedded in the business, building computer
+          vision, recommendation and agentic systems where the company actually operates.
+        </p>
+        <p>
+          Before that I did a PhD in electrical engineering at Toronto, on quantum photonics &mdash;
+          entangled photon sources in semiconductor waveguides &mdash; then spent years designing
+          optical systems for AR glasses and surgical robotics. Physics taught me to distrust any
+          result I can&rsquo;t measure, which is why I care more about evaluation harnesses than
+          leaderboards.
+        </p>
+        <p>
+          The governance side exists for one reason: a four-layer model &mdash; prevention, gateway,
+          observability, live protection &mdash; plus tool sanctioning and policy aligned to PDPA and
+          ISO/IEC 42001. It&rsquo;s what lets 500 people use what we build directly, and 2,500
+          colleagues across HQ work with AI, without anyone betting the company on it.
+        </p>
+      </div>
+      <figure class="portrait">
+        <img src="{{ '/assets/img/portrait.webp' | relative_url }}" alt="Pisek Kultavewuti">
+        <figcaption>Bangkok, TH</figcaption>
+      </figure>
+    </div>
+  </section>
 
-
-    <section id="previous-work" class="previous-work">
-        <div class="container">
-            <div class="section-header">
-                <h2>Previous Work</h2>
-                <p>Explore our past projects and workshops</p>
-            </div>
-            <div class="work-cards">
-                <a href="projects/generative-ai-workshop.html" class="work-card">
-                    <div class="work-image">
-                        <img src="projects/genai-workshop-images/image-1.jpg"
-                            alt="Generative AI x Data Analytics Workshop">
-                    </div>
-                    <div class="work-content">
-                        <h3>Generative AI x Data Analytics Workshop</h3>
-                        <p>A hands-on workshop combining generative AI techniques with data analytics for business
-                            insights.</p>
-                        <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-                <a href="projects/in-house-trainings.html" class="work-card">
-                    <div class="work-image">
-                        <img src="projects/in-house-training-images/inhouse-1.jpg" alt="Various In-House Trainings">
-                    </div>
-                    <div class="work-content">
-                        <h3>Various In-House Trainings</h3>
-                        <p>Customized training programs on AI and Generative AI for organizations across multiple
-                            industries.</p>
-                        <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="knowledge-base" class="knowledge-base">
-        <div class="container">
-            <div class="section-header">
-                <h2>Knowledge Base</h2>
-                <p>Latest insights and articles on AI, agents, and practical implementation strategies</p>
-            </div>
-            <div class="knowledge-cards">
-                <div class="card">
-                    <div class="knowledge-image">
-                        <img src="assets/images/blog/2025-10-07-what-is-rag-a-guide-for-business/RAG.PNG"
-                            alt="What is RAG? A Guide for Business" loading="lazy" width="400" height="200" />
-                        <div class="card-badge badge-latest">Oct 7, 2025</div>
-                    </div>
-                    <h3>What is RAG? A Guide for Business</h3>
-                    <p>Learn how Retrieval-Augmented Generation bridges the critical knowledge gap for Large Language
-                        Models.</p>
-                    <ul class="features">
-                        <li><i class="fas fa-check"></i> RAG vs Fine-tuning</li>
-                        <li><i class="fas fa-check"></i> Real-world business use cases</li>
-                        <li><i class="fas fa-check"></i> Enhanced accuracy & trust</li>
-                    </ul>
-                    <a href="posts/2025-10-07-what-is-rag-a-guide-for-business/" class="btn btn-outline">Read
-                        Article</a>
-                </div>
-                <div class="card">
-                    <div class="knowledge-image">
-                        <img src="assets/images/blog/2025-09-25-documenting-for-age-of-ai/documenting-for-ai.png"
-                            alt="Documenting for the Age of AI" loading="lazy" width="400" height="200" />
-                        <div class="card-badge badge-featured">Sep 25, 2025</div>
-                    </div>
-                    <h3>Documenting for the Age of AI</h3>
-                    <p>Our Documentation Was a Messy Goldmine. Here's How We're Fixing It for AI.</p>
-                    <ul class="features">
-                        <li><i class="fas fa-check"></i> Markdown & structured data</li>
-                        <li><i class="fas fa-check"></i> Knowledge graphs for AI</li>
-                        <li><i class="fas fa-check"></i> Docs as Code philosophy</li>
-                    </ul>
-                    <a href="posts/2025-09-25-documenting-for-age-of-ai/" class="btn btn-outline">Read Article</a>
-                </div>
-                <div class="card">
-                    <div class="knowledge-image">
-                        <img src="assets/images/blog/2025-09-18-why-avoid-ai-agents/why-avooid-ai-agents-01.png"
-                            alt="Why You Should Avoid AI Agents" loading="lazy" width="400" height="200" />
-                        <div class="card-badge badge-guide">Sep 18, 2025</div>
-                    </div>
-                    <h3>Why You Should Avoid AI Agents (For Most Things!)</h3>
-                    <p>Hey, AI agents may not be the best for you. Here are 4 reasons why you should avoid using them.
-                    </p>
-                    <ul class="features">
-                        <li><i class="fas fa-check"></i> Over-engineering concerns</li>
-                        <li><i class="fas fa-check"></i> Control and debugging challenges</li>
-                        <li><i class="fas fa-check"></i> Context requirements and costs</li>
-                    </ul>
-                    <a href="posts/2025-09-18-why-avoid-ai-agents/" class="btn btn-outline">Read Article</a>
-                </div>
-            </div>
-            <div class="knowledge-cta">
-                <a href="knowledge-base/" class="btn btn-primary">Explore All Articles</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Us</h2>
-                <p>AI expert with proven industry experience</p>
-            </div>
-            <div class="about-profile">
-                <div class="profile-image">
-                    <img src="images/pisek.jpg" alt="Pisek Kultavewuti">
-                </div>
-                <div class="profile-info">
-                    <h3>Hi! I'm Pisek, <Fieldset:d></Fieldset:d>Founder of Case Done</h3>
-                    <p class="title">AI Specialist & Educator</p>
-                    <p>More specifically, I help people and businesses transform with strategic AI and Gen AI—faster,
-                        smarter, and with real impact. With a PhD in engineering and hands-on experience leading AI at
-                        CJ Express (Thailand), I’ve delivered NLP, vision, and LLM-powered solutions at scale. Now
-                        through Case Done, I make AI practical and accessible through comprehensive courses and training
-                        programs.</p>
-                    <p>Whether you're exploring generative AI for the first time or looking to build advanced AI skills,
-                        I offer structured learning experiences designed around your goals. From foundational concepts
-                        to advanced implementations, I help you build AI expertise with clarity, confidence, and
-                        real-world applications.</p>
-                    <div class="social-links">
-                        <a href="https://www.youtube.com/@CaseDonebyAI" target="_blank" aria-label="YouTube"><i
-                                class="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/company/casedonebyai" target="_blank" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/casedonebyai" target="_blank" aria-label="x"><i class="fab fa-x"></i></a>
-                        <a href="https://github.com/casedone" target="_blank" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://casedonebyai.substack.com" target="_blank" aria-label="Substack"><i
-                                class="fas fa-newspaper"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="experience-cards">
-                <div class="experience-card">
-                    <div class="icon-container">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Leadership</h3>
-                    <p>Led AI teams in retail business environments, developing strategies for AI implementation and integration.</p>
-                </div>
-                <div class="experience-card">
-                    <div class="icon-container">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Development</h3>
-                    <p>Built practical AI solutions showcased on my YouTube channel, focusing on real-world applications and use cases.</p>
-                </div>
-                <div class="experience-card">
-                    <div class="icon-container">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Education</h3>
-                    <p>Delivered in-house training and workshops for various organizations, helping teams understand and leverage AI.</p>
-                </div>
-            </div> -->
-        </div>
-    </section>
-
-    {% include footer.html %}
-
-    {% include navigation-script.html %}
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+  {% include follow.html %}

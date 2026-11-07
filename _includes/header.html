@@ -1,0 +1,20 @@
+{%- comment -%}
+  Site header. Pass nav="home" | "writing" | "work" | "article"
+  from the page's front matter (nav:) so the current section is marked.
+{%- endcomment -%}
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="site-mark" href="{{ '/' | relative_url }}">Pisek Kultavewuti<span class="full"> — Bangkok</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      {%- if page.nav == 'home' %}
+      <a href="#writing" aria-current="page">Writing</a>
+      {%- else %}
+      <a href="{{ '/writing/' | relative_url }}"{% if page.nav == 'writing' or page.nav == 'article' %} aria-current="page"{% endif %}>Writing</a>
+      {%- endif %}
+      <a href="{{ '/work/' | relative_url }}"{% if page.nav == 'work' %} aria-current="page"{% endif %}>Work</a>
+      <a href="{{ '/work/#enquire' | relative_url }}" class="nav-hire">Hire me</a>
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener">Follow</a>
+    </nav>
+  </div>
+</header>
