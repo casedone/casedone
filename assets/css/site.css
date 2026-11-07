@@ -17,8 +17,16 @@ body { font-size: 19.5px; }
   position: relative; background: var(--paper-2);
 }
 .cover__photo { position: relative; }
+/* The crop is proportional, not a fixed pixel height: a fixed height let the box
+   aspect run away from the photo's 3:2 as the viewport widened, so a centred
+   crop ate the top of the frame (and the subject's head with it). aspect-ratio
+   keeps the box near the photo's own shape; max-height stops it dominating tall
+   screens. object-position is biased upward because the subject sits high in
+   the frame — at 3:1 the visible window still starts above his head. */
 .cover__photo img {
-  width: 100%; height: clamp(340px, 56vh, 560px); object-fit: cover; display: block;
+  width: 100%; display: block;
+  aspect-ratio: 16/9; max-height: 76vh;
+  object-fit: cover; object-position: 50% 12%;
   filter: saturate(.72) contrast(1.04) brightness(.94);
 }
 .cover__photo::after {
@@ -162,7 +170,8 @@ body { font-size: 19.5px; }
 }
 @media (max-width: 520px) {
   .run { grid-template-columns: 1fr; }
-  .cover__photo img { height: 300px; }
+  /* Narrow screens crop the sides, not the top, so the frame can go squarer. */
+  .cover__photo img { aspect-ratio: 4/3; max-height: none; }
 }
 
 /* D3 only: article hero is a deliberate full-bleed band, caption stays in the column */
