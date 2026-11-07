@@ -154,6 +154,10 @@ body { font-size: 19.5px; }
   letter-spacing: -.012em; text-wrap: pretty;
 }
 
+/* ---------- enquire band (work page) ---------- */
+.enquire-band { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; }
+.enquire-actions { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: flex-end; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 1000px) {
   .story { grid-template-columns: 1fr 300px; }
@@ -169,6 +173,8 @@ body { font-size: 19.5px; }
   .night--d3 .split { grid-template-columns: 1fr; }
   .night--d3 figure { max-width: 240px; }
   .night--d3 figure img { aspect-ratio: 1; }
+  .enquire-band { grid-template-columns: 1fr; gap: 1.4rem; }
+  .enquire-actions { justify-content: flex-start; }
 }
 @media (max-width: 520px) {
   .run { grid-template-columns: 1fr; }
