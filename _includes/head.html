@@ -17,16 +17,21 @@
 <meta property="og:description" content="{{ meta_desc }}">
 <meta property="og:url" content="{{ page.url | prepend: site.url }}">
 {%- if page.featured_image %}
-<meta property="og:image" content="{{ page.featured_image | prepend: site.url }}">
+  {%- assign og_image = page.featured_image | replace: '/covers/', '/og/' | replace: '.webp', '.jpg' %}
 {%- else %}
-<meta property="og:image" content="{{ '/apple-touch-icon.png' | prepend: site.url }}">
+  {%- assign og_image = '/assets/img/og/portrait.jpg' %}
 {%- endif %}
+<meta property="og:image" content="{{ og_image | prepend: site.url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
 {%- if page.layout == 'post' %}
 <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
 {%- endif %}
-<meta name="twitter:card" content="{% if page.featured_image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ meta_title }}">
 <meta name="twitter:description" content="{{ meta_desc }}">
+<meta name="twitter:image" content="{{ og_image | prepend: site.url }}">
 <link rel="icon" type="image/png" href="{{ '/favicon-96x96.png' | relative_url }}" sizes="96x96">
 <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
 <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">

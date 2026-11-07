@@ -28,7 +28,8 @@ _archive/courses/        RETIRED courses page, kept for reference, not built
 _posts/                  the articles (one markdown file each)
 assets/css/base.css      design tokens + shared components
 assets/css/site.css      D3 composition (cover, cards, essay, prose)
-assets/img/              covers/, posts/ (in-article), work/, portrait.webp
+assets/img/              covers/, posts/ (in-article), work/, og/ (1200x630 JPEGs
+                         for link previews — LinkedIn does not render WebP), portrait.webp
 sitemap.xml              generated from site.pages and site.posts
 robots.txt               allow all + sitemap pointer
 ```
