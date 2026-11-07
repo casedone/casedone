@@ -1,8 +1,11 @@
 # kpisek.com
 
-Pisek Kultavewuti's personal site: long-form writing on AI systems, plus the Case
-Done practice (advisory, training, courses) kept deliberately in its own band.
-Static Jekyll, built by GitHub Pages, no plugins and no build workflow.
+Pisek Kultavewuti's personal site: long-form writing on AI systems, plus a small
+advisory and training practice kept deliberately in its own band. Static Jekyll,
+built by GitHub Pages, no plugins and no build workflow.
+
+There is no newsletter, no Substack and no RSS feed. LinkedIn is the only channel
+for updates, so every "follow" link points at the profile set in `_config.yml`.
 
 ## Structure
 
@@ -12,23 +15,28 @@ _layouts/default.html    html shell: head + header + <main> + footer
 _layouts/post.html       article: title block, hero, prose, prev/next
 _includes/head.html      meta, canonical, Open Graph, fonts, stylesheet
 _includes/header.html    site nav (marks the current section from page.nav)
-_includes/footer.html    footer: links, RSS
-_includes/subscribe.html Substack embed + fallback link
+_includes/footer.html    footer: LinkedIn and GitHub only
+_includes/follow.html    the LinkedIn follow band (links, no form, no embed)
 _includes/post-lead.html cover story (the `featured: true` post, else newest)
 _includes/post-list.html card grid; `limit=` to cap, `skip=` to omit a url
 _includes/post-feed.html lead + "More writing" run (home page composition)
 index.html               home: cover, writing, photo essay, practice band, about
 writing/index.html       the full archive, one loop over site.posts
-work/index.html          advisory, training, courses CTA, selected work
-courses/index.html       course catalogue
+work/index.html          advisory, training, selected work, LinkedIn CTA
+_archive/courses/        RETIRED courses page, kept for reference, not built
 404.html                 not-found page
 _posts/                  the articles (one markdown file each)
 assets/css/base.css      design tokens + shared components
 assets/css/site.css      D3 composition (cover, cards, essay, prose)
 assets/img/              covers/, posts/ (in-article), work/, portrait.webp
-feed.xml, sitemap.xml    generated from _posts and site.pages
+sitemap.xml              generated from site.pages and site.posts
 robots.txt               allow all + sitemap pointer
 ```
+
+`_archive/` holds pages taken off the site that may still be useful later. Jekyll
+ignores underscore-prefixed directories, so nothing in there is built or reachable;
+`_config.yml` lists it under `exclude` to make that explicit. Each archived page
+carries a comment at the top recording how to bring it back.
 
 ## Publishing a post
 
@@ -40,9 +48,11 @@ robots.txt               allow all + sitemap pointer
    `{{ '/assets/img/posts/<slug>/<name>.webp' | relative_url }}`.
 4. Cover art goes to `assets/img/covers/<slug>.webp` and is what
    `featured_image:` points at.
+5. Close with the one-line footer every post uses:
+   `> *Following along*: I post these on [LinkedIn](https://www.linkedin.com/in/kpisek) — that's where the conversation happens now.`
 
-The home page, the writing index, prev/next links and the feed all read
-`site.posts` — there is no list to update by hand anywhere.
+The home page, the writing index and the prev/next links all read `site.posts` —
+there is no list to update by hand anywhere.
 
 ## Local preview
 

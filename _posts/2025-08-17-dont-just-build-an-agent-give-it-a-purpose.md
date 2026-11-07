@@ -96,8 +96,8 @@ The takeaway is simple: agents excel at navigating uncertainty. They thrive on t
 
 This planning stage isn't the most glamorous part of building an AI agent, but it is the most important. A well-defined mission is the foundation upon which everything else is built.
 
-In our next post, we'll talk about what constitutes a functional AI agent. Subscribe to get it in your inbox!
+In our next post, we'll talk about what constitutes a functional AI agent. Follow along on LinkedIn and it'll land there.
 
 ----
 
-> *FYI*: 📩 Subscribe and find More articles can be found in our dedicated [Blogs on Substack](https://casedonebyai.substack.com/).
+> *Following along*: I post these on [LinkedIn](https://www.linkedin.com/in/kpisek) — that's where the conversation happens now.

@@ -3,8 +3,7 @@ title: Pisek Kultavewuti
 tagline: AI systems, agents, and the work of making them useful.
 description: >-
   Writing by Pisek Kultavewuti on AI systems, agent architecture and evaluation,
-  and what it actually takes to put AI to work inside a business. Advisory and
-  training through Case Done.
+  and what it actually takes to put AI to work inside a business.
 author: Pisek Kultavewuti
 
 url: "https://kpisek.com"
@@ -13,10 +12,10 @@ url: "https://kpisek.com"
 # makes removing this line the entire migration.
 baseurl: "/casedone"
 
-# Contact and elsewhere
-substack_url: "https://casedonebyai.substack.com"
-linkedin_url: "https://www.linkedin.com/company/casedonebyai"
-github_url: "https://github.com/casedone"
+# Contact and elsewhere. There is no newsletter and no feed: LinkedIn is the
+# only channel, so these are the only outbound links the site needs.
+linkedin_url: "https://www.linkedin.com/in/kpisek"
+github_url: "https://github.com/psklight"
 
 # Build settings
 markdown: kramdown
@@ -41,3 +40,6 @@ exclude:
   - vendor
   - .bundle
   - CNAME
+  # Retired pages kept for reference. Jekyll already skips underscore-prefixed
+  # directories; this line documents why _archive exists.
+  - _archive

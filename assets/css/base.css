@@ -183,26 +183,13 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-r
 .portrait img { filter: grayscale(1) contrast(1.05); border: 1px solid var(--rule); }
 .portrait figcaption { font-family: var(--mono); font-size: .68rem; color: var(--muted); margin-top: .5rem; letter-spacing: .04em; text-transform: uppercase; }
 
-/* ---------- subscribe ---------- */
-.subscribe { background: var(--green-wash); border-radius: 4px; padding: clamp(1.75rem, 4vw, 2.75rem); display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
-.subscribe h2 { font-size: clamp(1.3rem, 2.6vw, 1.55rem); font-weight: 500; letter-spacing: -.01em; }
-.subscribe p { color: var(--ink-soft); font-size: .96rem; margin-top: .55rem; max-width: 42ch; }
-.subscribe__form { display: flex; gap: .5rem; flex-wrap: wrap; }
-.subscribe__form input {
-  flex: 1 1 12rem; min-width: 0; font-family: var(--mono); font-size: .82rem; color: var(--ink);
-  background: var(--paper); border: 1px solid var(--rule-strong); border-radius: 2px; padding: .7rem .8rem;
-}
-.subscribe__form input::placeholder { color: var(--muted); }
-.subscribe__form button {
-  font-family: var(--mono); font-size: .78rem; letter-spacing: .07em; text-transform: uppercase;
-  color: var(--paper); background: var(--green); border: 1px solid var(--green); border-radius: 2px;
-  padding: .7rem 1.1rem; cursor: pointer; transition: background .2s var(--ease);
-}
-.subscribe__form button:hover { background: var(--green-mid); border-color: var(--green-mid); }
-.subscribe__note { font-family: var(--mono); font-size: .68rem; color: var(--muted); margin-top: .6rem; letter-spacing: .03em; }
-.subscribe__form[data-state="done"] { display: none; }
-.subscribe__success { display: none; font-family: var(--mono); font-size: .82rem; color: var(--green); }
-.subscribe__success[data-on="true"] { display: block; }
+/* ---------- follow band (LinkedIn is the only channel: no form, no embed) ---------- */
+.follow { background: var(--green-wash); border-radius: 4px; padding: clamp(1.75rem, 4vw, 2.75rem); display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+.follow h2 { font-size: clamp(1.3rem, 2.6vw, 1.55rem); font-weight: 500; letter-spacing: -.01em; }
+.follow p { color: var(--ink-soft); font-size: .96rem; margin-top: .55rem; max-width: 46ch; }
+.follow__actions { display: flex; gap: .6rem; flex-wrap: wrap; justify-content: flex-end; }
+.follow__actions .btn-solid { background: var(--green); border-color: var(--green); color: var(--paper); }
+.follow__actions .btn-solid:hover { background: var(--green-mid); border-color: var(--green-mid); color: var(--paper); }
 
 /* ---------- footer ---------- */
 .site-footer { border-top: 1px solid var(--rule); padding-block: 2.5rem 3.5rem; }
@@ -255,7 +242,7 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-r
 .page-head h1 { font-size: clamp(1.9rem, 4.5vw, 2.6rem); font-weight: 500; letter-spacing: -.02em; }
 .page-head p { color: var(--muted); margin-top: .8rem; max-width: 54ch; }
 
-.engage { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem; }
+.engage { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1.5rem; margin-top: 1rem; }
 .engage__card { border: 1px solid var(--rule); padding: 1.5rem; display: flex; flex-direction: column; background: var(--paper); }
 .engage__card--feature { border-color: var(--green); background: var(--green-wash); }
 .engage__k { font-family: var(--mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
@@ -274,7 +261,8 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-r
 .case-item p { margin-top: .4rem; color: var(--muted); font-size: .97rem; max-width: 62ch; }
 .case-item .outcome { margin-top: .7rem; font-family: var(--mono); font-size: .72rem; letter-spacing: .05em; text-transform: uppercase; color: var(--green); }
 
-/* ---------- courses page ---------- */
+/* ---------- courses page (ARCHIVED: only _archive/courses/index.html uses
+   this; restore both together or delete both) ---------- */
 .course-row { display: grid; grid-template-columns: 1fr 15rem; gap: 2rem; padding-block: 1.8rem; border-top: 1px solid var(--rule); align-items: start; }
 .course-row h2 { font-size: 1.35rem; font-weight: 500; letter-spacing: -.012em; line-height: 1.25; }
 .course-row .summary { margin-top: .6rem; color: var(--muted); font-size: .96rem; max-width: 58ch; }
@@ -319,7 +307,8 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-r
   .post-row__meta .read { display: inline; }
   .about-strip { grid-template-columns: 1fr; }
   .portrait { max-width: 160px; order: -1; }
-  .subscribe { grid-template-columns: 1fr; }
+  .follow { grid-template-columns: 1fr; }
+  .follow__actions { justify-content: flex-start; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-links { justify-content: flex-start; }
   .next-prev { grid-template-columns: 1fr; }

@@ -170,4 +170,4 @@ This isn't just a tech-for-tech's-sake project. It's a strategic shift from crea
 
 ----
 
-> *FYI*: 📩 Subscribe and find More articles can be found in our dedicated [Blogs on Substack](https://casedonebyai.substack.com/).
+> *Following along*: I post these on [LinkedIn](https://www.linkedin.com/in/kpisek) — that's where the conversation happens now.

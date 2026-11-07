@@ -57,4 +57,4 @@ To fully benefit from AI, you must be aware of both predictive and generative mo
 
 ----
 
-> *FYI*: 📩 Subscribe and find More articles can be found in our dedicated [Blogs on Substack](https://casedonebyai.substack.com/).
+> *Following along*: I post these on [LinkedIn](https://www.linkedin.com/in/kpisek) — that's where the conversation happens now.
