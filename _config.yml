@@ -7,10 +7,10 @@ description: >-
 author: Pisek Kultavewuti
 
 url: "https://kpisek.com"
-# Previews still serve from the project page, so the repo subpath stays until the
-# custom domain resolves. Every internal path goes through relative_url, which
-# makes removing this line the entire migration.
-baseurl: "/casedone"
+# The site is served from the domain root by Cloudflare Pages, so there is no
+# baseurl. Every internal path still goes through relative_url, which is what
+# makes this a one-line setting rather than a find-and-replace.
+baseurl: ""
 
 # Contact and elsewhere. There is no newsletter and no feed: LinkedIn is the
 # only channel, so these are the only outbound links the site needs.

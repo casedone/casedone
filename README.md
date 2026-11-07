@@ -57,23 +57,45 @@ there is no list to update by hand anywhere.
 
 ## Local preview
 
-The host Ruby is too old for the gem set, so build in the pinned container:
+The host Ruby is too old for the gem set, so build in a container pinned to the
+same runtime Cloudflare Pages builds on (Ruby 3.4, see `.ruby-version`):
 
 ```bash
-docker run --rm -e JEKYLL_NO_BUNDLER_REQUIRE=true -v "$PWD":/site -w /site \
-  jekyll-3.10 /usr/local/bundle/bin/jekyll build
+docker run --rm -v "$PWD":/site -w /site ruby:3.4 \
+  bash -lc 'bundle install && bundle exec jekyll build'
 
-mkdir -p /tmp/serve && cp -R _site /tmp/serve/casedone
-cd /tmp/serve && python3 -m http.server 8791
-# http://127.0.0.1:8791/casedone/
+cd _site && python3 -m http.server 8791
+# http://127.0.0.1:8791/
 ```
 
-(`jekyll-3.10` is a one-time `docker commit` of the Pages Jekyll version — see the
-`site-audit-revamp` skill's Jekyll reference if the image is missing.)
+There is no `baseurl`, so the site serves from the root — `/` is the home page.
+`http.server` never rebuilds: re-run the build, then refresh.
 
 ## Deploying
 
-GitHub Pages legacy build from `main`, no Actions workflow, no gems beyond Jekyll.
-`baseurl: "/casedone"` exists only so the project-page preview resolves; with the
-custom domain live, set `baseurl: ""` and add the `CNAME` file. Nothing else changes,
-because every internal path goes through `relative_url`.
+Cloudflare Pages, Git integration, from `main`. Build settings (set once in the
+dashboard, Workers & Pages → the project → Settings → Build):
+
+| Setting | Value |
+|---|---|
+| Production branch | `main` |
+| Build command | `bundle exec jekyll build` |
+| Build output directory | `_site` |
+
+`RUBY_VERSION` is not needed: Pages' v3 build image defaults to Ruby 3.4.4 and
+`.ruby-version` pins it explicitly. `Gemfile.lock` is committed so a deploy cannot
+pick up a different Jekyll than the one that was tested — Pages runs `bundle
+install` on every build.
+
+Every branch other than `main` gets a preview deployment at
+`<branch>.<project>.pages.dev`, so a PR can be reviewed as a real site before the
+merge. The custom domain (`kpisek.com`) is attached once in the dashboard, which
+also creates the DNS record and certificate; there is no `CNAME` file in the repo
+because that is a GitHub Pages mechanism.
+
+The repo name (`casedone/casedone`) is historical and does not appear in any URL a
+reader sees; the project name in Cloudflare controls the `*.pages.dev` hostname.
+
+GitHub Pages is switched off for this repo. It still builds from `main` at
+`casedone.github.io/casedone`, and with no `baseurl` that copy serves without its
+stylesheets — one more reason to disable it the moment the Pages deployment is live.
